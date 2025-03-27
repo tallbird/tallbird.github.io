@@ -1,0 +1,234 @@
+:root {
+    --purple: rgb(152, 68, 252);
+    --white: rgb(255, 255, 255);
+    --darkGray: rgb(41, 41, 41);
+    --magnolia: rgb(250, 244, 237);
+    }
+h1 {
+    color: var(--darkGray);
+    font-size: 7.5vw;
+    margin: 0px;
+}
+h2 {
+    color: var(--darkGray);
+    font-size: 4.5vw;
+    margin: 0px;
+}
+h3 {
+    color: var(--white);
+    font-size: 2.8vw;
+    margin: 0px;
+}
+p {
+    color: var(--darkGray);
+    font-size: 2.5vw;
+    margin: 0px;
+}
+p.smaller {
+    color: var(--white);
+    font-size: 1.5vw;
+}
+.center {
+    text-align: center;
+}
+.lighter {
+    font-weight: lighter;
+}
+header {
+    background-color: var(--magnolia);
+    height: 5vw;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+body {
+    background-color: var(--white);
+    margin: 0px;
+    display: grid;
+    row-gap: 0px;
+}
+main {
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    background: transparent;
+}
+.splashScreen, .aboutMe, .smallBox, .sixBoxes {
+    display: inline-grid;
+    row-gap: 0px;
+    width: 100%;
+}
+.splashScreen.top {
+    height: 35vw;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 14vw 8vw 13vw;
+    grid-template-areas:
+    ". . ."
+    ". Ani ."
+    ". Tag .";
+}
+.splashScreen.bottom {
+    height: 25vw;
+    grid-template-columns: 35vw 30vw 35vw;
+    grid-template-rows: 4.5vw auto;
+    grid-template-areas:
+    ". Work Line1"
+    ". . Line2";
+}
+.aboutMe.blurb {
+    height: 35vw;
+    grid-template-columns: 5vw auto 35vw 5vw;
+    grid-template-rows: 4.5vw auto;
+    grid-template-areas:
+    ". Title Avatar"
+    ". TextBox1 Avatar";
+}
+.aboutMe.sixBoxes {
+    height: 27.5vw;
+    grid-template-columns: 5vw 1fr 7vw 1fr 7vw 1fr 5vw;
+    grid-template-rows: 2.5vw 1fr 2.5vw 1fr;
+    grid-template-areas:
+    ". . . . . . ."
+    ". Box1 . Box2 . Box3 ."
+    ". . . . . . ."
+    ". Box4 . Box5 . Box6 .";
+}
+.smallBox {
+    height: 11.5vw;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 2.5fr;
+    grid-template-areas:
+    "icon boxTitle"
+    ". info";
+}
+.horizontalLine {
+    height: 12vw;
+    width: 100%;
+}
+.areaAni, .areaTag, .areaWork, .areaTextBox1, .horizontalLine {
+    display: inline-grid;
+    align-items: center;
+    justify-items: center;
+}
+.areaAni {
+    grid-area: Ani;
+}
+.areaTag {
+    grid-area: Tag;
+}
+.areaWork {
+    grid-area: Work;
+}
+.areaLine1 {
+    grid-area: Line1;
+    position: relative;
+}
+.areaLine2 {
+    grid-area: Line2;
+    position: relative;
+}
+.areaTitle {
+    grid-area: Title;
+}
+.areaTextBox1 {
+    grid-area: TextBox1;
+}
+.areaAvatar {
+    grid-area: Avatar;
+    position: relative;
+}
+.areaBox1 {
+    grid-area: Box1;
+}
+.areaBox2 {
+    grid-area: Box2;
+}
+.areaBox3 {
+    grid-area: Box3;
+}
+.areaBox4 {
+    grid-area: Box4;
+}
+.areaBox5 {
+    grid-area: Box5;
+}
+.areaBox6 {
+    grid-area: Box6;
+}
+.icon {
+    grid-area: icon;
+}
+.boxTitle {
+    grid-area: boxTitle;
+    margin-top: 1.5vw;
+}
+.info {
+    grid-area: info;
+}
+.purple {
+    background-color: var(--purple);
+}
+.rounded {
+    border-radius: 17px;
+}
+.circle {
+    border-radius: 50%;
+    background-color: var(--white);
+    border: 0.2vw solid var(--darkGray);
+    filter: drop-shadow(-2.5vw 1vw var(--purple));
+    width: 25vw;
+    height: 25vw;
+    margin-left: 10vw;
+    margin-top: 3vw;
+}
+.icon {
+    border-radius: 50%;
+    background-color: var(--white);
+    width: 3.8vw;
+    height: 3.8vw;
+    margin-left: 1.2vw;
+    margin-top: 1.2vw;
+}
+.lineH {
+    height: 3px;
+    width: 60.3vw;
+    background: repeating-linear-gradient(90deg,var(--darkGray) 0 7px ,transparent 0 10px) center;
+    background-size:100% 3px;
+    background-repeat:no-repeat;
+    z-index: -20;
+}
+.lineHtop {
+    height: 3px;
+    width: 12vw;
+    background: repeating-linear-gradient(90deg,var(--darkGray) 0 7px ,transparent 0 10px) center;
+    background-size:100% 3px;
+    background-repeat:no-repeat;
+    margin-left: 3vw;
+    margin-top: 2vw;
+    z-index: -20;
+}
+.lineV {
+    height: 58.5vw;
+    width: 3px;
+    background: repeating-linear-gradient(to bottom,var(--darkGray) 0 7px,transparent 0 10px) 100% 3px no-repeat;
+    position: absolute;
+    margin-left: 20vw;
+    margin-top: 10vw;
+    z-index: -20;
+}
+.lineVtop {
+    height: 30vw;
+    width: 3px;
+    background: repeating-linear-gradient(to bottom,var(--darkGray) 0 7px,transparent 0 10px) 100% 3px no-repeat;
+    position: absolute;
+    margin-left: 15vw;
+    margin-top: -2.8vw;
+    z-index: -20;
+}
