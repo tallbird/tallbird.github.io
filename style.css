@@ -5,27 +5,22 @@
     --magnolia: rgb(250, 244, 237);
     }
 h1 {
-    color: var(--darkGray);
     font-size: 7.5vw;
     margin: 0px;
 }
 h2 {
-    color: var(--darkGray);
     font-size: 4.5vw;
     margin: 0px;
 }
 h3 {
-    color: var(--white);
     font-size: 2.8vw;
     margin: 0px;
 }
 p {
-    color: var(--darkGray);
     font-size: 2.5vw;
     margin: 0px;
 }
 p.smaller {
-    color: var(--white);
     font-size: 1.5vw;
 }
 .center {
@@ -33,6 +28,12 @@ p.smaller {
 }
 .lighter {
     font-weight: lighter;
+}
+.whiteText {
+    color: var(--white);
+}
+.purpleText {
+    color: var(--purple);
 }
 header {
     background-color: var(--magnolia);
@@ -43,6 +44,7 @@ header {
 }
 body {
     background-color: var(--white);
+    color: var(--darkGray);
     margin: 0px;
     display: grid;
     row-gap: 0px;
@@ -60,7 +62,7 @@ main {
     height: 0px;
     background: transparent;
 }
-.splashScreen, .aboutMe, .smallBox, .sixBoxes {
+.splashScreen, .aboutMe, .smallBox, .sixBoxes, .sectionL, .sectionR, .contactMe, .contact {
     display: inline-grid;
     row-gap: 0px;
     width: 100%;
@@ -105,14 +107,57 @@ main {
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 2.5fr;
     grid-template-areas:
-    "icon boxTitle"
-    ". info";
+    "Icon BoxTitle"
+    ". Info";
+}
+.sectionR {
+    height: 70vw;
+    grid-template-columns: 1fr 2fr 5vw;
+    grid-template-rows: 30vw 12vw 3vw 22vw 3vw;
+    grid-template-areas:
+    "Line Picture ."
+    "Line SubHeader ."
+    "Line Client ."
+    "Line TextBox ."
+    "Line ReadMore .";
+}
+.sectionL {
+    height: 70vw;
+    grid-template-columns: 10vw 2fr 1fr;
+    grid-template-rows: 30vw 12vw 3vw 22vw 3vw;
+    grid-template-areas:
+    ". Picture Line"
+    ". SubHeader Line"
+    ". Client Line"
+    ". TextBox Line"
+    ". ReadMore Line";
+}
+.contactMe {
+    height: 30vw;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 5vw 25vw;
+    grid-template-areas:
+    ". . ."
+    ". Contact .";
+    margin-bottom: 3vw;
+}
+.contact {
+    height: 25vw;
+    grid-template-columns: 5vw 5vw auto 5vw;
+    grid-template-rows: 1.5vw 5vw 3.5vw 1vw 6vw 6vw;
+    grid-template-areas:
+    ". . . ."
+    ". SubHeader SubHeader ."
+    ". TextBox TextBox ."
+    ". . . ."
+    ". Icon1 Link1 ."
+    ". Icon2 Link2 .";
 }
 .horizontalLine {
     height: 12vw;
     width: 100%;
 }
-.areaAni, .areaTag, .areaWork, .areaTextBox1, .horizontalLine {
+.areaAni, .areaTag, .areaWork, .areaTextBox1, .horizontalLine, .contact.icon {
     display: inline-grid;
     align-items: center;
     justify-items: center;
@@ -162,21 +207,55 @@ main {
 .areaBox6 {
     grid-area: Box6;
 }
-.icon {
-    grid-area: icon;
+.areaIcon {
+    grid-area: Icon;
 }
-.boxTitle {
-    grid-area: boxTitle;
+.areaBoxTitle {
+    grid-area: BoxTitle;
     margin-top: 1.5vw;
 }
-.info {
-    grid-area: info;
+.areaInfo {
+    grid-area: Info;
+}
+.areaSubHeader {
+    grid-area: SubHeader;
+}
+.pictureL, .pictureR {
+    grid-area: Picture;
+}
+.areaClient {
+    grid-area: Client;
+}
+.areaTextBox {
+    grid-area: TextBox;
+}
+.areaReadMore {
+    grid-area: ReadMore;
+}
+.areaLine {
+    grid-area: Line;
+    position: relative;
+}
+.areaContact {
+    grid-area: Contact;
+}
+.areaIcon1 {
+    grid-area: Icon1;
+}
+.areaIcon2 {
+    grid-area: Icon2;
+}
+.areaLink1 {
+    grid-area: Link1;
+}
+.areaLink2 {
+    grid-area: Link2;
 }
 .purple {
     background-color: var(--purple);
 }
 .rounded {
-    border-radius: 17px;
+    border-radius: 2vw;
 }
 .circle {
     border-radius: 50%;
@@ -188,47 +267,76 @@ main {
     margin-left: 10vw;
     margin-top: 3vw;
 }
+.pictureR, .pictureL {
+    border-radius: 3vw;
+    background-color: var(--white);
+    border: 0.25vw solid var(--darkGray);
+    width: 60vw;
+    height: 25vw;
+    margin-bottom: 4vw;
+}
+.pictureR {
+    filter: drop-shadow(-1.5vw 2.5vw var(--purple));
+}
+.pictureL {
+    filter: drop-shadow(1.5vw 2.5vw var(--purple));
+}
+.contact {
+    border-radius: 3vw;
+    background-color: var(--purple);
+    width: 70vw;
+    height: 25vw;
+    margin-bottom: 4vw;
+    z-index: -20;
+}
 .icon {
     border-radius: 50%;
     background-color: var(--white);
     width: 3.8vw;
     height: 3.8vw;
+}
+.smallBox .icon {
     margin-left: 1.2vw;
     margin-top: 1.2vw;
 }
-.lineH {
+.lineH, .lineHtop {
     height: 3px;
-    width: 60.3vw;
     background: repeating-linear-gradient(90deg,var(--darkGray) 0 7px ,transparent 0 10px) center;
     background-size:100% 3px;
     background-repeat:no-repeat;
     z-index: -20;
 }
+.lineH {
+    width: 60.3vw;
+}
 .lineHtop {
-    height: 3px;
     width: 12vw;
-    background: repeating-linear-gradient(90deg,var(--darkGray) 0 7px ,transparent 0 10px) center;
-    background-size:100% 3px;
-    background-repeat:no-repeat;
     margin-left: 3vw;
     margin-top: 2vw;
+}
+.lineV, .lineVtop, .lineL, .lineR {
+    width: 3px;
+    background: repeating-linear-gradient(to bottom,var(--darkGray) 0 7px,transparent 0 10px) 100% 3px no-repeat;
+    position: absolute;
     z-index: -20;
 }
 .lineV {
     height: 58.5vw;
-    width: 3px;
-    background: repeating-linear-gradient(to bottom,var(--darkGray) 0 7px,transparent 0 10px) 100% 3px no-repeat;
-    position: absolute;
     margin-left: 20vw;
     margin-top: 10vw;
-    z-index: -20;
 }
 .lineVtop {
     height: 30vw;
-    width: 3px;
-    background: repeating-linear-gradient(to bottom,var(--darkGray) 0 7px,transparent 0 10px) 100% 3px no-repeat;
-    position: absolute;
     margin-left: 15vw;
     margin-top: -2.8vw;
-    z-index: -20;
+}
+.lineR {
+    height: 82.75vw;
+    margin-left: 10vw;
+    margin-top: -6.3vw;
+}
+.lineL {
+    height: 82.75vw;
+    margin-left: 19.5vw;
+    margin-top: -6.3vw;
 }
