@@ -20,6 +20,9 @@ p {
     font-size: 2.5vw;
     margin: 0px;
 }
+p.small {
+    font-size: 2.1vw;
+}
 p.smaller {
     font-size: 1.5vw;
 }
@@ -137,14 +140,23 @@ main {
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 5vw 25vw;
     grid-template-areas:
-    ". . ."
+    ". LineS ."
     ". Contact .";
     margin-bottom: 3vw;
 }
+.reviews {
+    height: 33vw;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 8vw 25vw;
+    grid-template-areas:
+    ". . ."
+    ". Reviews .";
+    margin-bottom: 3vw;
+}
 .contact {
-    height: 25vw;
+    height: 30vw;
     grid-template-columns: 5vw 5vw auto 5vw;
-    grid-template-rows: 1.5vw 5vw 3.5vw 1vw 6vw 6vw;
+    grid-template-rows: 1.5vw 6vw 3.5vw 1vw 6vw 6vw;
     grid-template-areas:
     ". . . ."
     ". SubHeader SubHeader ."
@@ -157,7 +169,7 @@ main {
     height: 12vw;
     width: 100%;
 }
-.areaAni, .areaTag, .areaWork, .areaTextBox1, .horizontalLine, .contact.icon {
+.areaAni, .areaTag, .areaWork, .areaTextBox1, .horizontalLine, .contact.icon, .reviews {
     display: inline-grid;
     align-items: center;
     justify-items: center;
@@ -181,6 +193,7 @@ main {
 }
 .areaTitle {
     grid-area: Title;
+    position: relative;
 }
 .areaTextBox1 {
     grid-area: TextBox1;
@@ -239,6 +252,9 @@ main {
 .areaContact {
     grid-area: Contact;
 }
+.areaLineShort {
+    grid-area: LineS;
+}
 .areaIcon1 {
     grid-area: Icon1;
 }
@@ -251,11 +267,22 @@ main {
 .areaLink2 {
     grid-area: Link2;
 }
+.areaReviews {
+    grid-area: Reviews;
+}
 .purple {
     background-color: var(--purple);
 }
 .rounded {
     border-radius: 2vw;
+}
+.purpleBox {
+    background-color: var(--purple);
+    border-radius: 0.5vw;
+    width: 19vw;
+    height: 2.5vw;
+    margin-left: -0.5vw;
+    margin-top: -2vw;
 }
 .circle {
     border-radius: 50%;
@@ -284,6 +311,14 @@ main {
 .contact {
     border-radius: 3vw;
     background-color: var(--purple);
+    width: 60vw;
+    height: 30vw;
+    z-index: -20;
+}
+.reviewBox {
+    border-radius: 3vw;
+    border: 0.25vw solid var(--purple);
+    background-color: var(--white);
     width: 70vw;
     height: 25vw;
     margin-bottom: 4vw;
@@ -314,7 +349,7 @@ main {
     margin-left: 3vw;
     margin-top: 2vw;
 }
-.lineV, .lineVtop, .lineL, .lineR {
+.lineV, .lineVtop, .lineL, .lineR, .lineShort {
     width: 3px;
     background: repeating-linear-gradient(to bottom,var(--darkGray) 0 7px,transparent 0 10px) 100% 3px no-repeat;
     position: absolute;
@@ -339,4 +374,12 @@ main {
     height: 82.75vw;
     margin-left: 19.5vw;
     margin-top: -6.3vw;
+}
+.lineShort {
+    height: 10vw;
+    margin-left: 30vw;
+    margin-top: -10vw;
+}
+.blankFooter {
+    height: 5vw
 }
