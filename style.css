@@ -37,7 +37,14 @@ p.smaller {
 .purpleText {
     color: var(--purple);
 }
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
 header {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     background-color: var(--white);
     height: 5vw;
     position: sticky;
@@ -71,7 +78,7 @@ main {
 }
 .menuBar {
     height: 5vw;
-    grid-template-columns: 7vw 20vw auto 12vw 10vw 10vw 10vw;
+    grid-template-columns: 7vw 20vw auto 13vw 11vw 11vw 11vw;
     grid-template-areas:
     "Avatar Name . AboutMe Projects Reviews Contact";
 }
@@ -436,9 +443,9 @@ main {
     margin-top: -6.3vw;
 }
 .lineShort {
-    height: 8vw;
+    height: 9vw;
     margin-left: 30vw;
-    margin-top: -8vw;
+    margin-top: -9vw;
 }
 .blankFooter {
     height: 5vw

@@ -21,3 +21,12 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
 }
+
+// offset menu links so they don't hide under sticky menu bar -- might need to adjust value for mobile?
+window.addEventListener('hashchange', offsetAnchor);
+window.setTimeout(offsetAnchor, 1);
+function offsetAnchor() {
+	if (location.hash.length !== 0) {
+		window.scrollTo(window.scrollX, window.scrollY - 50);
+	}
+}
