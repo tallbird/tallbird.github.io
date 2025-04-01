@@ -2,7 +2,6 @@
     --purple: rgb(152, 68, 252);
     --white: rgb(255, 255, 255);
     --darkGray: rgb(41, 41, 41);
-    --magnolia: rgb(250, 244, 237);
     }
 h1 {
     font-size: 7.5vw;
@@ -39,7 +38,7 @@ p.smaller {
     color: var(--purple);
 }
 header {
-    background-color: var(--magnolia);
+    background-color: var(--white);
     height: 5vw;
     position: sticky;
     top: 0;
@@ -65,10 +64,16 @@ main {
     height: 0px;
     background: transparent;
 }
-.splashScreen, .aboutMe, .smallBox, .sixBoxes, .sectionL, .sectionR, .contactMe, .contact, .reviewBox {
+.menuBar, .splashScreen, .aboutMe, .smallBox, .sixBoxes, .sectionL, .sectionR, .contactMe, .contact, .reviewBox {
     display: inline-grid;
     row-gap: 0px;
     width: 100%;
+}
+.menuBar {
+    height: 5vw;
+    grid-template-columns: 7vw 20vw auto 12vw 10vw 10vw 10vw;
+    grid-template-areas:
+    "Avatar Name . AboutMe Projects Reviews Contact";
 }
 .splashScreen.top {
     height: 35vw;
@@ -183,6 +188,26 @@ main {
     align-items: center;
     justify-items: center;
 }
+.areaName {
+    grid-area: Name;
+    margin-top: 0.9vw;
+}
+.areaAboutMe {
+    grid-area: AboutMe;
+    margin-top: 0.9vw;
+}
+.areaProjects {
+    grid-area: Projects;
+    margin-top: 0.9vw;
+}
+.areaReviews {
+    grid-area: Reviews;
+    margin-top: 0.9vw;
+}
+.areaContact {
+    grid-area: Contact;
+    margin-top: 0.9vw;
+}
 .areaAni {
     grid-area: Ani;
 }
@@ -276,7 +301,7 @@ main {
 .areaLink2 {
     grid-area: Link2;
 }
-.areaReviews {
+.areaReviewBox {
     grid-area: Reviews;
 }
 .areaPrev {
@@ -315,6 +340,14 @@ main {
     filter: drop-shadow(-1.7vw 0.7vw var(--purple));
     width: 18vw;
     height: 18vw;
+}
+.circleMenu {
+    filter: drop-shadow(-0.5vw 0.2vw var(--purple));
+    border: 0.1vw solid var(--darkGray);
+    margin-left: 2.5vw;
+    margin-top: 0.7vw;
+    width: 3vw;
+    height: 3vw;
 }
 .pictureR, .pictureL {
     border-radius: 3vw;
