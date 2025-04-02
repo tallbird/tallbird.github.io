@@ -3,33 +3,54 @@
     --white: rgb(255, 255, 255);
     --darkGray: rgb(41, 41, 41);
     }
+h1, h2, h3 {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-style: normal;
+}
 h1 {
     font-size: 7.5vw;
     margin: 0px;
 }
 h2 {
-    font-size: 4.5vw;
+    font-size: 4vw;
     margin: 0px;
 }
 h3 {
     font-size: 2.8vw;
     margin: 0px;
 }
-p {
+h3.smaller {
     font-size: 2.5vw;
+}
+p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2vw;
     margin: 0px;
+    line-height: 3vw;
 }
 p.small {
-    font-size: 2.1vw;
+    font-size: 1.8vw;
 }
 p.smaller {
     font-size: 1.5vw;
+}
+p.tiny {
+    font-size: 1.35vw;
+}
+.heavier {
+    font-weight: 700;
 }
 .center {
     text-align: center;
 }
 .lighter {
     font-weight: lighter;
+}
+.nudgeUp {
+    margin-bottom: 0.2vw;
 }
 .whiteText {
     color: var(--white);
@@ -71,7 +92,7 @@ main {
     height: 0px;
     background: transparent;
 }
-.menuBar, .splashScreen, .aboutMe, .smallBox, .sixBoxes, .sectionL, .sectionR, .contactMe, .contact, .reviewBox {
+.menuBar, .splashScreen, .aboutMe, .skillBox, .skills, .sectionL, .sectionR, .contactMe, .contact, .reviewBox {
     display: inline-grid;
     row-gap: 0px;
     width: 100%;
@@ -99,6 +120,21 @@ main {
     ". Work Line1"
     ". . Line2";
 }
+.splashScreen.bottom {
+    height: 25vw;
+    grid-template-columns: 35vw 30vw 35vw;
+    grid-template-rows: 4.5vw auto;
+    grid-template-areas:
+    ". Work Line1"
+    ". . Line2";
+}
+.checkOut {
+    height: 4.5vw;
+    grid-template-columns: 1vw auto 3vw 3vw 1vw;
+    grid-template-rows: 4.5vw;
+    grid-template-areas:
+    ". Check . Arrow .";
+}
 .aboutMe.blurb {
     height: 35vw;
     grid-template-columns: 5vw auto 35vw 5vw;
@@ -107,28 +143,28 @@ main {
     ". Title Avatar ."
     ". TextBox1 Avatar .";
 }
-.aboutMe.sixBoxes {
+.aboutMe.skills {
     height: 27.5vw;
     grid-template-columns: 5vw 1fr 7vw 1fr 7vw 1fr 5vw;
     grid-template-rows: 2.5vw 1fr 2.5vw 1fr;
     grid-template-areas:
     ". . . . . . ."
-    ". Box1 . Box2 . Box3 ."
+    ". Skill1 . Skill2 . Skill3 ."
     ". . . . . . ."
-    ". Box4 . Box5 . Box6 .";
+    ". Skill4 . Skill5 . Skill6 .";
 }
-.smallBox {
+.skillBox {
     height: 11.5vw;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 2.5fr;
     grid-template-areas:
-    "Icon BoxTitle"
+    "Icon SkillTitle"
     ". Info";
 }
 .sectionR {
     height: 70vw;
     grid-template-columns: 1fr 2fr 5vw;
-    grid-template-rows: 30vw 12vw 3vw 22vw 3vw;
+    grid-template-rows: 30vw 11.5vw 3.5vw 22vw 3vw;
     grid-template-areas:
     "Line Picture ."
     "Line SubHeader ."
@@ -139,7 +175,7 @@ main {
 .sectionL {
     height: 70vw;
     grid-template-columns: 10vw 2fr 1fr;
-    grid-template-rows: 30vw 12vw 3vw 22vw 3vw;
+    grid-template-rows: 30vw 11.5vw 3.5vw 22vw 3vw;
     grid-template-areas:
     ". Picture Line"
     ". SubHeader Line"
@@ -168,7 +204,7 @@ main {
     display: grid;
     height: 25vw;
     grid-template-columns: 5vw 22vw auto 5vw;
-    grid-template-rows: 3vw 2vw auto;
+    grid-template-rows: 3vw 3vw auto;
     grid-template-areas:
     ". . . ."
     ". Avatar Title ."
@@ -177,14 +213,15 @@ main {
 .contact {
     height: 30vw;
     grid-template-columns: 5vw 5vw auto 5vw;
-    grid-template-rows: 1.5vw 6vw 3.5vw 1vw 6vw 6vw;
+    grid-template-rows: 1.5vw 6vw 3.5vw 1vw 6vw 6vw 6vw;
     grid-template-areas:
     ". . . ."
     ". SubHeader SubHeader ."
     ". TextBox TextBox ."
     ". . . ."
     ". Icon1 Link1 ."
-    ". Icon2 Link2 .";
+    ". Icon2 Link2 ."
+    ". Icon3 Link3 .";
 }
 .horizontalLine {
     height: 12vw;
@@ -197,7 +234,7 @@ main {
 }
 .areaName {
     grid-area: Name;
-    margin-top: 0.9vw;
+    margin-top: 0.5vw;
 }
 .areaAboutMe {
     grid-area: AboutMe;
@@ -224,6 +261,13 @@ main {
 .areaWork {
     grid-area: Work;
 }
+.areaCheck {
+    grid-area: Check;
+}
+.areaArrow {
+    grid-area: Arrow;
+    width: 2.5vw;
+}
 .areaLine1 {
     grid-area: Line1;
     position: relative;
@@ -243,29 +287,29 @@ main {
     grid-area: Avatar;
     position: relative;
 }
-.areaBox1 {
-    grid-area: Box1;
+.areaSkill1 {
+    grid-area: Skill1;
 }
-.areaBox2 {
-    grid-area: Box2;
+.areaSkill2 {
+    grid-area: Skill2;
 }
-.areaBox3 {
-    grid-area: Box3;
+.areaSkill3 {
+    grid-area: Skill3;
 }
-.areaBox4 {
-    grid-area: Box4;
+.areaSkill4 {
+    grid-area: Skill4;
 }
-.areaBox5 {
-    grid-area: Box5;
+.areaSkill5 {
+    grid-area: Skill5;
 }
-.areaBox6 {
-    grid-area: Box6;
+.areaSkill6 {
+    grid-area: Skill6;
 }
 .areaIcon {
     grid-area: Icon;
 }
-.areaBoxTitle {
-    grid-area: BoxTitle;
+.areaSkillTitle {
+    grid-area: SkillTitle;
     margin-top: 1.5vw;
 }
 .areaInfo {
@@ -302,11 +346,17 @@ main {
 .areaIcon2 {
     grid-area: Icon2;
 }
+.areaIcon3 {
+    grid-area: Icon3;
+}
 .areaLink1 {
     grid-area: Link1;
 }
 .areaLink2 {
     grid-area: Link2;
+}
+.areaLink3 {
+    grid-area: Link3;
 }
 .areaReviewBox {
     grid-area: Reviews;
@@ -320,13 +370,20 @@ main {
 .purple {
     background-color: var(--purple);
 }
+.purpleFilter {
+    filter: invert(43%) sepia(47%) saturate(7489%) hue-rotate(250deg) brightness(96%) contrast(106%);
+    width: 2.5vw;
+}
 .rounded {
     border-radius: 2vw;
+}
+.roundedWork {
+    border-radius: 1.5vw;
 }
 .purpleBox {
     background-color: var(--purple);
     border-radius: 0.5vw;
-    width: 19vw;
+    width: 17.5vw;
     height: 2.5vw;
     margin-left: -0.5vw;
     margin-top: -2vw;
@@ -352,9 +409,20 @@ main {
     filter: drop-shadow(-0.5vw 0.2vw var(--purple));
     border: 0.1vw solid var(--darkGray);
     margin-left: 2.5vw;
-    margin-top: 0.7vw;
+    margin-top: 0.8vw;
     width: 3vw;
     height: 3vw;
+}
+.circle img {
+    width: 25vw;
+    margin-top: 0.5vw;
+}
+.circleReview img {
+    width: 18vw;
+    filter: none;
+}
+.circleMenu img {
+    width: 3vw;
 }
 .pictureR, .pictureL {
     border-radius: 3vw;
@@ -370,10 +438,17 @@ main {
 .pictureL {
     filter: drop-shadow(1.5vw 2.5vw var(--purple));
 }
+.picture {
+    border-radius: 3vw;
+    width: 60vw;
+    height: 25vw;
+    border: none;
+    filter: none;
+}
 .contact {
     border-radius: 3vw;
     background-color: var(--purple);
-    width: 60vw;
+    width: 65vw;
     height: 30vw;
     z-index: -20;
 }
@@ -391,15 +466,16 @@ main {
     width: 4vw;
     height: 4vw;
 }
-.icon {
-    border-radius: 50%;
-    background-color: var(--white);
-    width: 3.8vw;
-    height: 3.8vw;
+.prev img, .next img {
+    width: 4vw;
+    height: 4vw;
 }
-.smallBox .icon {
+.skillBox .icon {
     margin-left: 1.2vw;
     margin-top: 1.2vw;
+}
+.icon img {
+    width: 3.8vw;
 }
 .lineH, .lineHtop {
     height: 3px;
@@ -443,9 +519,9 @@ main {
     margin-top: -6.3vw;
 }
 .lineShort {
-    height: 9vw;
+    height: 8.5vw;
     margin-left: 30vw;
-    margin-top: -9vw;
+    margin-top: -8.5vw;
 }
 .blankFooter {
     height: 5vw
