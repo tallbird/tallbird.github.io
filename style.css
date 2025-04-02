@@ -39,6 +39,7 @@ p.smaller {
 }
 p.tiny {
     font-size: 1.35vw;
+    line-height: 1.7vw;
 }
 .heavier {
     font-weight: 700;
