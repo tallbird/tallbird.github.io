@@ -572,23 +572,20 @@ main {
         vertical-align: middle;
         line-height: 25vw;
     }
+    .subHeader h2 {
+        font-size: 7vw;
+    }
     header {
         height: 8vw;
     }
     .menuBar {
         height: 8vw;
         grid-template-columns: 7vw 27vw auto 18vw 14vw 14vw 14vw;
-        grid-template-areas:
-        "Avatar Name . AboutMe Projects Reviews Contact";
     }
     .splashScreen.top {
         height: 73vw;
         grid-template-columns: 0.5fr 4fr 0.5fr;
         grid-template-rows: 40vw 15vw 18vw;
-        grid-template-areas:
-        ". . ."
-        ". Ani ."
-        ". Tag .";
     }
     .splashScreen.bottom {
         height: 60vw;
@@ -628,31 +625,16 @@ main {
         height: 21vw;
         grid-template-columns: 1fr 3fr;
         grid-template-rows: 1fr 2.5fr;
-        grid-template-areas:
-        "Icon SkillTitle"
-        ". Info";
     }
     .sectionR {
-        height: 70vw;
-        grid-template-columns: 1fr 2fr 5vw;
-        grid-template-rows: 30vw 11.5vw 3.5vw 22vw 3vw;
-        grid-template-areas:
-        "Line Picture ."
-        "Line SubHeader ."
-        "Line Client ."
-        "Line TextBox ."
-        "Line ReadMore .";
+        height: 155vw;
+        grid-template-columns: 15vw auto 12vw;
+        grid-template-rows: 50vw 28vw 7vw 63vw 7vw;
     }
     .sectionL {
-        height: 70vw;
-        grid-template-columns: 10vw 2fr 1fr;
-        grid-template-rows: 30vw 11.5vw 3.5vw 22vw 3vw;
-        grid-template-areas:
-        ". Picture Line"
-        ". SubHeader Line"
-        ". Client Line"
-        ". TextBox Line"
-        ". ReadMore Line";
+        height: 155vw;
+        grid-template-columns: 12vw auto 12vw;
+        grid-template-rows: 50vw 28vw 7vw 63vw 7vw;
     }
     .reviews {
         height: 33vw;
@@ -713,20 +695,20 @@ main {
         margin-top: -11vw;
     }
     .lineH, .lineHtop {
-        height: 4px;
-        background: repeating-linear-gradient(90deg,var(--darkGray) 0 10px ,transparent 0 14px) center;
+        height: 3px;
+        background: repeating-linear-gradient(90deg,var(--darkGray) 0 7px ,transparent 0 10px) center;
     }
     .lineH {
-        width: 60.3vw;
+        width: 86vw;
     }
     .lineHtop {
         width: 17.5vw;
         margin-left: 3vw;
-        margin-top: 3.6vw;
+        margin-top: 3.7vw;
     }
     .lineV, .lineVtop, .lineL, .lineR, .lineShort {
-        width: 4px;
-        background: repeating-linear-gradient(to bottom,var(--darkGray) 0 10px,transparent 0 14px) 100% 3px no-repeat;
+        width: 3px;
+        background: repeating-linear-gradient(to bottom,var(--darkGray) 0 7px,transparent 0 10px) 100% 3px no-repeat;
     }
     .lineV {
         height: 0vw;
@@ -734,21 +716,38 @@ main {
     .lineVtop {
         height: 235vw;
         margin-left: 20.1vw;
-        margin-top: -2.7vw;
+        margin-top: -2.8vw;
     }
     .lineR {
-        height: 82.75vw;
-        margin-left: 10vw;
-        margin-top: -6.3vw;
+        height: 176.4vw;
+        margin-left: 4.8vw;
+        margin-top: -10.7vw;
     }
     .lineL {
-        height: 82.75vw;
-        margin-left: 19.5vw;
-        margin-top: -6.3vw;
+        height: 176.4vw;
+        margin-left: 7vw;
+        margin-top: -10.7vw;
     }
     .lineShort {
         height: 8.5vw;
         margin-left: 30vw;
         margin-top: -8.5vw;
+    }
+    .pictureR, .pictureL {
+        border-radius: 4vw;
+        width: 73vw;
+        height: 45vw;
+        margin-bottom: 4vw;
+    }
+    .pictureR {
+        filter: drop-shadow(-2.5vw 4vw var(--purple));
+    }
+    .pictureL {
+        filter: drop-shadow(2.5vw 4vw var(--purple));
+    }
+    .picture {
+        border-radius: 4vw;
+        width: 73vw;
+        height: 45vw;
     }
 }
