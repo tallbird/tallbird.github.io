@@ -533,3 +533,222 @@ main {
 .blankFooter {
     height: 5vw
 }
+@media all and (orientation:portrait) {
+    h1 {
+        font-size: 13vw;
+        margin: 0px;
+    }
+    h2 {
+        font-size: 5.5vw;
+        margin: 0px;
+    }
+    h3 {
+        font-size: 4vw;
+        margin: 0px;
+    }
+    h3.smaller {
+        font-size: 4vw;
+    }
+    p {
+        font-size: 3.5vw;
+        margin: 0px;
+        line-height: 6vw;
+    }
+    p.small {
+        font-size: 1.8vw;
+    }
+    p.smaller {
+        font-size: 2vw;
+    }
+    p.tiny {
+        font-size: 2.4vw;
+        line-height: 2.9vw;
+    }
+    .areaArrow.whiteText {
+        font-size: 4vw;
+    }
+    .areaTitle .heavier {
+        font-size: 7.5vw;
+        vertical-align: middle;
+        line-height: 25vw;
+    }
+    header {
+        height: 8vw;
+    }
+    .menuBar {
+        height: 8vw;
+        grid-template-columns: 7vw 27vw auto 18vw 14vw 14vw 14vw;
+        grid-template-areas:
+        "Avatar Name . AboutMe Projects Reviews Contact";
+    }
+    .splashScreen.top {
+        height: 73vw;
+        grid-template-columns: 0.5fr 4fr 0.5fr;
+        grid-template-rows: 40vw 15vw 18vw;
+        grid-template-areas:
+        ". . ."
+        ". Ani ."
+        ". Tag .";
+    }
+    .splashScreen.bottom {
+        height: 60vw;
+        grid-template-columns: 27.5vw 45vw 27.5vw;
+        grid-template-rows: 2vw 6vw auto;
+        grid-template-areas:
+        ". . ."
+        ". Work Line1"
+        ". . Line2";
+    }
+    .checkOut {
+        height: 8vw;
+        grid-template-columns: 2vw auto 2vw 4vw 2vw;
+        grid-template-rows: 8vw;
+    }
+    .aboutMe.blurb {
+        height: 100vw;
+        grid-template-columns: 12vw auto 30vw 12vw;
+        grid-template-rows: 25vw auto;
+        grid-template-areas:
+        ". Title Avatar ."
+        ". TextBox1 TextBox1 .";
+    }
+    .aboutMe.skills {
+        height: 70vw;
+        grid-template-columns: 12vw 1fr 7vw 1fr 12vw;
+        grid-template-rows: 3vw 1fr 3vw 1fr 3vw 1fr;
+        grid-template-areas:
+        ". . . . ."
+        ". Skill1 . Skill2 ."
+        ". . . . ."
+        ". Skill3 . Skill4 ."
+        ". . . . ."
+        ". Skill5 . Skill6 .";
+    }
+    .skillBox {
+        height: 21vw;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1fr 2.5fr;
+        grid-template-areas:
+        "Icon SkillTitle"
+        ". Info";
+    }
+    .sectionR {
+        height: 70vw;
+        grid-template-columns: 1fr 2fr 5vw;
+        grid-template-rows: 30vw 11.5vw 3.5vw 22vw 3vw;
+        grid-template-areas:
+        "Line Picture ."
+        "Line SubHeader ."
+        "Line Client ."
+        "Line TextBox ."
+        "Line ReadMore .";
+    }
+    .sectionL {
+        height: 70vw;
+        grid-template-columns: 10vw 2fr 1fr;
+        grid-template-rows: 30vw 11.5vw 3.5vw 22vw 3vw;
+        grid-template-areas:
+        ". Picture Line"
+        ". SubHeader Line"
+        ". Client Line"
+        ". TextBox Line"
+        ". ReadMore Line";
+    }
+    .reviews {
+        height: 33vw;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: 5vw 25vw;
+        grid-template-areas:
+        ". . ."
+        "Prev Reviews Next";
+    }
+    .reviewWrapper {
+        display: grid;
+        height: 25vw;
+        grid-template-columns: 5vw 22vw auto 5vw;
+        grid-template-rows: 3vw 3vw auto;
+        grid-template-areas:
+        ". . . ."
+        ". Avatar Title ."
+        ". Avatar TextBox1 .";
+    }
+    .contactMe {
+        height: 35vw;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: 5vw 30vw;
+        grid-template-areas:
+        ". LineS ."
+        ". Contact .";
+        margin-bottom: 3vw;
+    }
+    .contact {
+        height: 30vw;
+        grid-template-columns: 5vw 7vw auto 5vw;
+        grid-template-rows: 1.5vw 6vw 3.5vw 1vw 6vw 6vw 6vw;
+        grid-template-areas:
+        ". . . ."
+        ". SubHeader SubHeader ."
+        ". TextBox TextBox ."
+        ". . . ."
+        ". Icon1 Link1 ."
+        ". Icon2 Link2 ."
+        ". Icon3 Link3 .";
+    }
+    .horizontalLine {
+        height: 20vw;
+        width: 100%;
+    }
+    .icon img {
+        width: 6vw;
+        height: 6vw;
+    }
+    .circle {
+        margin-left: 3vw;
+        margin-top: 0vw;
+    }
+    .purpleBox {
+        width: 33vw;
+        height: 4vw;
+        margin-left: -1vw;
+        margin-top: -11vw;
+    }
+    .lineH, .lineHtop {
+        height: 4px;
+        background: repeating-linear-gradient(90deg,var(--darkGray) 0 10px ,transparent 0 14px) center;
+    }
+    .lineH {
+        width: 60.3vw;
+    }
+    .lineHtop {
+        width: 17.5vw;
+        margin-left: 3vw;
+        margin-top: 3.6vw;
+    }
+    .lineV, .lineVtop, .lineL, .lineR, .lineShort {
+        width: 4px;
+        background: repeating-linear-gradient(to bottom,var(--darkGray) 0 10px,transparent 0 14px) 100% 3px no-repeat;
+    }
+    .lineV {
+        height: 0vw;
+    }
+    .lineVtop {
+        height: 235vw;
+        margin-left: 20.1vw;
+        margin-top: -2.7vw;
+    }
+    .lineR {
+        height: 82.75vw;
+        margin-left: 10vw;
+        margin-top: -6.3vw;
+    }
+    .lineL {
+        height: 82.75vw;
+        margin-left: 19.5vw;
+        margin-top: -6.3vw;
+    }
+    .lineShort {
+        height: 8.5vw;
+        margin-left: 30vw;
+        margin-top: -8.5vw;
+    }
+}
