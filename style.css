@@ -51,7 +51,10 @@ p.tiny {
     font-weight: lighter;
 }
 .nudgeUp {
-    margin-bottom: 0.2vw;
+    margin-bottom: 0.3vw;
+}
+.nudgeLeft {
+    margin-left: 0.3vw;
 }
 .whiteText {
     color: var(--white);
@@ -184,15 +187,6 @@ main {
     ". TextBox Line"
     ". ReadMore Line";
 }
-.contactMe {
-    height: 30vw;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 5vw 25vw;
-    grid-template-areas:
-    ". LineS ."
-    ". Contact .";
-    margin-bottom: 3vw;
-}
 .reviews {
     height: 33vw;
     grid-template-columns: 1fr 3fr 1fr;
@@ -211,9 +205,18 @@ main {
     ". Avatar Title ."
     ". Avatar TextBox1 .";
 }
+.contactMe {
+    height: 35vw;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 5vw 30vw;
+    grid-template-areas:
+    ". LineS ."
+    ". Contact .";
+    margin-bottom: 3vw;
+}
 .contact {
     height: 30vw;
-    grid-template-columns: 5vw 5vw auto 5vw;
+    grid-template-columns: 5vw 7vw auto 5vw;
     grid-template-rows: 1.5vw 6vw 3.5vw 1vw 6vw 6vw 6vw;
     grid-template-areas:
     ". . . ."
@@ -267,7 +270,7 @@ main {
 }
 .areaArrow {
     grid-area: Arrow;
-    width: 2.5vw;
+    font-size: 2.5vw;
 }
 .areaLine1 {
     grid-area: Line1;
@@ -371,10 +374,6 @@ main {
 .purple {
     background-color: var(--purple);
 }
-.purpleFilter {
-    filter: invert(43%) sepia(47%) saturate(7489%) hue-rotate(250deg) brightness(96%) contrast(106%);
-    width: 2.5vw;
-}
 .rounded {
     border-radius: 2vw;
 }
@@ -467,16 +466,23 @@ main {
     width: 4vw;
     height: 4vw;
 }
-.prev img, .next img {
-    width: 4vw;
-    height: 4vw;
+.prev .purpleText, .next .purpleText {
+    font-size: 2.5vw;
 }
 .skillBox .icon {
     margin-left: 1.2vw;
     margin-top: 1.2vw;
 }
 .icon img {
-    width: 3.8vw;
+    width: 4vw;
+    height: 4vw;
+}
+.icon .whiteText {
+    font-size: 4.5vw;
+}
+.squish {
+    -webkit-transform: scaleX(0.9);
+    transform: scaleX(0.9);
 }
 .lineH, .lineHtop {
     height: 3px;
