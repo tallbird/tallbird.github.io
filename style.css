@@ -492,7 +492,7 @@ main {
     z-index: -20;
 }
 .lineH {
-    width: 60.3vw;
+    width: 60.7vw;
 }
 .lineHtop {
     width: 12vw;
@@ -506,14 +506,14 @@ main {
     z-index: -20;
 }
 .lineV {
-    height: 58.5vw;
-    margin-left: 20vw;
+    height: 58.8vw;
+    margin-left: 20.3vw;
     margin-top: 10vw;
 }
 .lineVtop {
-    height: 30vw;
+    height: 32vw;
     margin-left: 15vw;
-    margin-top: -2.8vw;
+    margin-top: -2.7vw;
 }
 .lineR {
     height: 82.75vw;
@@ -633,29 +633,29 @@ main {
     }
     .sectionL {
         height: 155vw;
-        grid-template-columns: 12vw auto 12vw;
+        grid-template-columns: 12vw auto 15vw;
         grid-template-rows: 50vw 28vw 7vw 63vw 7vw;
     }
     .reviews {
-        height: 33vw;
+        height: 55vw;
         grid-template-columns: 1fr 3fr 1fr;
-        grid-template-rows: 5vw 25vw;
+        grid-template-rows: 5vw 50vw;
         grid-template-areas:
         ". . ."
         "Prev Reviews Next";
     }
     .reviewWrapper {
         display: grid;
-        height: 25vw;
+        height: 50vw;
         grid-template-columns: 5vw 22vw auto 5vw;
         grid-template-rows: 3vw 3vw auto;
         grid-template-areas:
         ". . . ."
         ". Avatar Title ."
-        ". Avatar TextBox1 .";
+        ". TextBox1 TextBox1 .";
     }
     .contactMe {
-        height: 35vw;
+        height: 45vw;
         grid-template-columns: 1fr 3fr 1fr;
         grid-template-rows: 5vw 30vw;
         grid-template-areas:
@@ -664,7 +664,7 @@ main {
         margin-bottom: 3vw;
     }
     .contact {
-        height: 30vw;
+        height: 40vw;
         grid-template-columns: 5vw 7vw auto 5vw;
         grid-template-rows: 1.5vw 6vw 3.5vw 1vw 6vw 6vw 6vw;
         grid-template-areas:
@@ -695,8 +695,8 @@ main {
         margin-top: -11vw;
     }
     .lineH, .lineHtop {
-        height: 3px;
-        background: repeating-linear-gradient(90deg,var(--darkGray) 0 7px ,transparent 0 10px) center;
+        height: 2.4px;
+        background: repeating-linear-gradient(90deg,var(--darkGray) 0 1vw ,transparent 0 1.5vw) center;
     }
     .lineH {
         width: 86vw;
@@ -707,21 +707,21 @@ main {
         margin-top: 3.7vw;
     }
     .lineV, .lineVtop, .lineL, .lineR, .lineShort {
-        width: 3px;
-        background: repeating-linear-gradient(to bottom,var(--darkGray) 0 7px,transparent 0 10px) 100% 3px no-repeat;
+        width: 2.5px;
+        background: repeating-linear-gradient(to bottom,var(--darkGray) 0 1vw,transparent 0 1.5vw) 100% 3px no-repeat;
     }
     .lineV {
         height: 0vw;
     }
     .lineVtop {
-        height: 235vw;
+        height: 234vw;
         margin-left: 20.1vw;
-        margin-top: -2.8vw;
+        margin-top: -2.7vw;
     }
     .lineR {
         height: 176.4vw;
-        margin-left: 4.8vw;
-        margin-top: -10.7vw;
+        margin-left: 7.4vw;
+        margin-top: -10.6vw;
     }
     .lineL {
         height: 176.4vw;
@@ -749,5 +749,19 @@ main {
         border-radius: 4vw;
         width: 73vw;
         height: 45vw;
+    }
+    .reviewBox {
+        border-radius: 4vw;
+        border: 0.3vw solid var(--purple);
+        height: 50vw;
+    }
+    .prev, .next {
+        border-radius: 50%;
+        border: 0.3vw solid var(--purple);
+        width: 7vw;
+        height: 7vw;
+    }
+    .prev .purpleText, .next .purpleText {
+        font-size: 4vw;
     }
 }
