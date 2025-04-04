@@ -425,9 +425,8 @@ main {
     width: 3vw;
 }
 .pictureR, .pictureL {
-    border-radius: 3vw;
+    border-radius: 4vw;
     background-color: var(--white);
-    border: 0.25vw solid var(--darkGray);
     width: 60vw;
     height: 25vw;
     margin-bottom: 4vw;
@@ -438,7 +437,7 @@ main {
 .pictureL {
     filter: drop-shadow(1.5vw 2.5vw var(--purple));
 }
-.picture {
+picture img {
     border-radius: 3vw;
     width: 60vw;
     height: 25vw;
@@ -485,9 +484,9 @@ main {
     transform: scaleX(0.9);
 }
 .lineH, .lineHtop {
-    height: 3px;
-    background: repeating-linear-gradient(90deg,var(--darkGray) 0 7px ,transparent 0 10px) center;
-    background-size:100% 3px;
+    height: 0.3vw;
+    background: repeating-linear-gradient(90deg,var(--darkGray) 0 0.7vw ,transparent 0 1vw) center;
+    background-size:100% 0.3vw;
     background-repeat:no-repeat;
     z-index: -20;
 }
@@ -500,28 +499,28 @@ main {
     margin-top: 2vw;
 }
 .lineV, .lineVtop, .lineL, .lineR, .lineShort {
-    width: 3px;
-    background: repeating-linear-gradient(to bottom,var(--darkGray) 0 7px,transparent 0 10px) 100% 3px no-repeat;
+    width: 0.3vw;
+    background: repeating-linear-gradient(to bottom,var(--darkGray) 0 0.7vw,transparent 0 1vw) 100% 0.3vw no-repeat;
     position: absolute;
     z-index: -20;
 }
 .lineV {
-    height: 58.8vw;
+    height: 58.6vw;
     margin-left: 20.3vw;
     margin-top: 10vw;
 }
 .lineVtop {
-    height: 32vw;
+    height: 30vw;
     margin-left: 15vw;
     margin-top: -2.7vw;
 }
 .lineR {
-    height: 82.75vw;
+    height: 82.6vw;
     margin-left: 10vw;
     margin-top: -6.3vw;
 }
 .lineL {
-    height: 82.75vw;
+    height: 82.6vw;
     margin-left: 19.5vw;
     margin-top: -6.3vw;
 }
@@ -695,8 +694,17 @@ main {
         margin-top: -11vw;
     }
     .lineH, .lineHtop {
-        height: 2.4px;
-        background: repeating-linear-gradient(90deg,var(--darkGray) 0 1vw ,transparent 0 1.5vw) center;
+        height: 0.5vw;
+        background: repeating-linear-gradient(90deg,var(--darkGray) 0 1vw ,transparent 0 1.3vw) center;
+        background-size:100% 0.5vw;
+        background-repeat:no-repeat;
+        z-index: -20;
+    }
+    .lineV, .lineVtop, .lineL, .lineR, .lineShort {
+        width: 0.5vw;
+        background: repeating-linear-gradient(to bottom,var(--darkGray) 0 1vw,transparent 0 1.3vw) 100% 0.5vw no-repeat;
+        position: absolute;
+        z-index: -20;
     }
     .lineH {
         width: 86vw;
@@ -705,10 +713,6 @@ main {
         width: 17.5vw;
         margin-left: 3vw;
         margin-top: 3.7vw;
-    }
-    .lineV, .lineVtop, .lineL, .lineR, .lineShort {
-        width: 2.5px;
-        background: repeating-linear-gradient(to bottom,var(--darkGray) 0 1vw,transparent 0 1.5vw) 100% 3px no-repeat;
     }
     .lineV {
         height: 0vw;
@@ -734,7 +738,7 @@ main {
         margin-top: -8.5vw;
     }
     .pictureR, .pictureL {
-        border-radius: 4vw;
+        border-radius: 7vw;
         width: 73vw;
         height: 45vw;
         margin-bottom: 4vw;
@@ -745,8 +749,8 @@ main {
     .pictureL {
         filter: drop-shadow(2.5vw 4vw var(--purple));
     }
-    .picture {
-        border-radius: 4vw;
+    picture img {
+        border-radius: 6vw;
         width: 73vw;
         height: 45vw;
     }
