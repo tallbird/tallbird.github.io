@@ -30,3 +30,8 @@ function offsetAnchor() {
 		window.scrollTo(window.scrollX, window.scrollY - 50);
 	}
 }
+
+function menuPopup() {
+var popup = document.getElementById("menuPopup");
+popup.classList.toggle("show");
+}

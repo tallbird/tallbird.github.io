@@ -105,7 +105,7 @@ main {
     height: 5vw;
     grid-template-columns: 7vw 20vw auto 13vw 11vw 11vw 11vw;
     grid-template-areas:
-    "Avatar Name . AboutMe Projects Reviews Contact";
+    "Avatar Name . AboutMe Projects Reviews ContactMenu";
 }
 .splashScreen.top {
     height: 35vw;
@@ -206,9 +206,9 @@ main {
     ". Avatar TextBox1 .";
 }
 .contactMe {
-    height: 35vw;
+    height: 36vw;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 5vw 30vw;
+    grid-template-rows: 6vw 30vw;
     grid-template-areas:
     ". LineS ."
     ". Contact .";
@@ -255,9 +255,12 @@ main {
     grid-area: Reviews;
     margin-top: 0.9vw;
 }
-.areaContact {
-    grid-area: Contact;
+.areaContactMenu {
+    grid-area: ContactMenu;
     margin-top: 0.9vw;
+}
+.areaPopup {
+    display: none;
 }
 .areaAni {
     grid-area: Ani;
@@ -547,7 +550,7 @@ picture img {
     h2.mobile {
         font-size: 6.5vw;
         line-height: 7.5vw;
-        margin-top: 2vw;
+        margin-top: 5vw;
     }
     h3 {
         font-size: 4vw;
@@ -593,7 +596,65 @@ picture img {
     }
     .menuBar {
         height: 8vw;
-        grid-template-columns: 7vw 27vw auto 18vw 14vw 14vw 14vw;
+        grid-template-columns: 10vw 30vw auto 8vw;
+        grid-template-areas:
+        "Avatar Name . Popup";
+    }
+    .areaAboutMe {
+        display: none;
+    }
+    .areaProjects {
+        display: none;
+    }
+    .areaReviews {
+        display: none;
+    }
+    .areaContactMenu {
+        display: none;
+    }
+    .areaAboutMePopup {
+        grid-area: AboutMePop;
+    }
+    .areaProjectsPopup {
+        grid-area: ProjectsPop;
+    }
+    .areaReviewsPopup {
+        grid-area: ReviewsPop;
+    }
+    .areaContactPopup {
+        grid-area: ContactPop;
+    }
+    .areaPopup {
+        grid-area: Popup;
+        display: grid;
+        position: relative;
+    }
+    #menuPopup {
+        visibility: hidden;
+        width: 20vw;
+        height: 25vw;
+        background-color: var(--white);
+        color: var(--darkGray);
+        text-align: right;
+        position: absolute;
+        grid-template-columns: auto;
+        grid-template-rows: 4vw 4vw 4vw 4vw;
+        grid-template-areas:
+        "AboutMePop"
+        "ProjectsPop"
+        "ReviewsPop"
+        "ContactPop";
+        z-index: 10;
+        margin-left: -16.5vw;
+        margin-top: 8vw;
+        border-bottom-left-radius: 4vw;
+    }
+    #menuPopup.show {
+        visibility: visible;
+    }
+    .burgerBars {
+        font-size: 4vw;
+        margin-top: 2vw;
     }
     .splashScreen.top {
         height: 73vw;
@@ -668,9 +729,9 @@ picture img {
         ". TextBox1 TextBox1 .";
     }
     .contactMe {
-        height: 55vw;
+        height: 56vw;
         grid-template-columns: 1fr 80vw 1fr;
-        grid-template-rows: 5vw 50vw;
+        grid-template-rows: 6vw 50vw;
     }
     .contact {
         height: 50vw;
@@ -772,14 +833,14 @@ picture img {
         height: 0vw;
     }
     .lineVtop {
-        height: 234vw;
+        height: 234.9vw;
         margin-left: 20.1vw;
         margin-top: -2.7vw;
     }
     .lineR {
         height: 176.4vw;
         margin-left: 7.4vw;
-        margin-top: -10.6vw;
+        margin-top: -10.7vw;
     }
     .lineL {
         height: 176.4vw;
