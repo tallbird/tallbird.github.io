@@ -231,6 +231,9 @@ main {
     height: 12vw;
     width: 100%;
 }
+.horizontalLineBottom {
+    display: none;
+}
 .areaAni, .areaTag, .areaWork, .areaTextBox1, .horizontalLine, .contact.icon, .reviews, .prev, .next {
     display: inline-grid;
     align-items: center;
@@ -541,6 +544,11 @@ picture img {
         font-size: 5.5vw;
         margin: 0px;
     }
+    h2.mobile {
+        font-size: 6.5vw;
+        line-height: 7.5vw;
+        margin-top: 2vw;
+    }
     h3 {
         font-size: 4vw;
         margin: 0px;
@@ -554,7 +562,13 @@ picture img {
         line-height: 6vw;
     }
     p.small {
-        font-size: 1.8vw;
+        font-size: 2.5vw;
+        line-height: 3.5vw;
+        margin-top: 1vw;
+    }
+    p.small.mobile {
+        font-size: 3.5vw;
+        line-height: 5vw;
     }
     p.smaller {
         font-size: 2vw;
@@ -636,48 +650,71 @@ picture img {
         grid-template-rows: 50vw 28vw 7vw 63vw 7vw;
     }
     .reviews {
-        height: 55vw;
+        height: 62vw;
         grid-template-columns: 1fr 3fr 1fr;
-        grid-template-rows: 5vw 50vw;
+        grid-template-rows: 5vw 55vw;
         grid-template-areas:
         ". . ."
         "Prev Reviews Next";
     }
     .reviewWrapper {
         display: grid;
-        height: 50vw;
-        grid-template-columns: 5vw 22vw auto 5vw;
-        grid-template-rows: 3vw 3vw auto;
+        height: 55vw;
+        grid-template-columns: 5vw 27vw auto 5vw;
+        grid-template-rows: 3vw 22vw auto;
         grid-template-areas:
         ". . . ."
         ". Avatar Title ."
         ". TextBox1 TextBox1 .";
     }
     .contactMe {
-        height: 45vw;
-        grid-template-columns: 1fr 3fr 1fr;
-        grid-template-rows: 5vw 30vw;
-        grid-template-areas:
-        ". LineS ."
-        ". Contact .";
-        margin-bottom: 3vw;
+        height: 55vw;
+        grid-template-columns: 1fr 80vw 1fr;
+        grid-template-rows: 5vw 50vw;
     }
     .contact {
-        height: 40vw;
-        grid-template-columns: 5vw 7vw auto 5vw;
-        grid-template-rows: 1.5vw 6vw 3.5vw 1vw 6vw 6vw 6vw;
-        grid-template-areas:
-        ". . . ."
-        ". SubHeader SubHeader ."
-        ". TextBox TextBox ."
-        ". . . ."
-        ". Icon1 Link1 ."
-        ". Icon2 Link2 ."
-        ". Icon3 Link3 .";
+        height: 50vw;
+        grid-template-columns: 8vw 7vw auto 8vw;
+        grid-template-rows: 1.5vw 10vw 10vw 1vw 8vw 8vw 8vw;
+        border-radius: 4vw;
+        width: 80vw;
     }
     .horizontalLine {
         height: 20vw;
+    }
+    .horizontalLineBottom {
+        display: grid;
+        position: relative;
+        height: 12vw;
         width: 100%;
+        grid-template-columns: 48vw 4vw 48vw;
+        grid-template-areas:
+        ". LineVB LineHB";
+    }
+    .lineHbottom, .lineVbottom {
+        align-items: center;
+        justify-items: center;
+    }
+    .lineHbottom {
+        grid-area: LineHB;
+        height: 0.5vw;
+        background: repeating-linear-gradient(90deg,var(--darkGray) 0 1vw ,transparent 0 1.3vw) center;
+        background-size:100% 0.5vw;
+        background-repeat:no-repeat;
+        width: 43vw;
+        margin-left: -2vw;
+        margin-top: 10.5vw;
+        z-index: -20;
+    }
+    .lineVbottom {
+        grid-area: LineVB;
+        width: 0.5vw;
+        background: repeating-linear-gradient(to bottom,var(--darkGray) 0 1vw,transparent 0 1.3vw) 100% 0.5vw no-repeat;
+        position: absolute;
+        height: 8vw;
+        margin-left: 2vw;
+        margin-top: 10vw;
+        z-index: -20;
     }
     .icon img {
         width: 6vw;
@@ -686,6 +723,23 @@ picture img {
     .circle {
         margin-left: 3vw;
         margin-top: 0vw;
+    }
+    .circleReview {
+        filter: drop-shadow(-2vw 1vw var(--purple));
+        width: 22vw;
+        height: 22vw;
+    }
+    .circleMenu {
+        margin-left: 2.5vw;
+        margin-top: 1.5vw;
+        width: 4vw;
+        height: 4vw;
+    }
+    .circleReview img {
+        width: 22vw;
+    }
+    .circleMenu img {
+        width: 4vw;
     }
     .purpleBox {
         width: 33vw;
@@ -733,9 +787,9 @@ picture img {
         margin-top: -10.7vw;
     }
     .lineShort {
-        height: 8.5vw;
-        margin-left: 30vw;
-        margin-top: -8.5vw;
+        height: 8vw;
+        margin-left: 40vw;
+        margin-top: -8vw;
     }
     .pictureR, .pictureL {
         border-radius: 7vw;
@@ -757,7 +811,7 @@ picture img {
     .reviewBox {
         border-radius: 4vw;
         border: 0.3vw solid var(--purple);
-        height: 50vw;
+        height: 55vw;
     }
     .prev, .next {
         border-radius: 50%;
