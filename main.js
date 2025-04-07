@@ -1,3 +1,22 @@
+let buttonTop = document.getElementById("scrollTop");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    buttonTop.style.display = "inline-block";
+  } else {
+    buttonTop.style.display = "none";
+  }
+}
+
+// on click scroll to the top of the document
+function scrollButton() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
