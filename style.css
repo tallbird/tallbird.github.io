@@ -77,19 +77,19 @@ header {
     z-index: 50;
 }
 body {
-    background-color: var(--white);
-    color: var(--darkGray);
     margin: 0px;
     display: grid;
     row-gap: 0px;
 }
 main {
+    background-color: var(--white);
     overflow: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    z-index: -50;
 }
 ::-webkit-scrollbar {
     width: 0px;
@@ -116,11 +116,10 @@ main {
 .menuBar, .splashScreen, .aboutMe, .skillBox, .skills, .sectionL, .sectionR, .contactMe, .contact, .reviewBox {
     display: inline-grid;
     row-gap: 0px;
-    width: 100%;
 }
 .menuBar {
     height: 5vw;
-    grid-template-columns: 7vw 20vw auto 13vw 11vw 11vw 11vw;
+    grid-template-columns: 7vw 20vw 27vw 13vw 11vw 11vw 11vw;
     grid-template-areas:
     "Avatar Name . AboutMe Projects Reviews ContactMenu";
 }
@@ -132,14 +131,6 @@ main {
     ". . ."
     ". Ani ."
     ". Tag .";
-}
-.splashScreen.bottom {
-    height: 25vw;
-    grid-template-columns: 35vw 30vw 35vw;
-    grid-template-rows: 4.5vw auto;
-    grid-template-areas:
-    ". Work Line1"
-    ". . Line2";
 }
 .splashScreen.bottom {
     height: 25vw;
@@ -224,7 +215,7 @@ main {
 }
 .contactMe {
     height: 36vw;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 17.5vw 65vw 17.5vw;
     grid-template-rows: 6vw 30vw;
     grid-template-areas:
     ". LineS ."
@@ -507,7 +498,7 @@ picture img {
 }
 .lineH, .lineHtop {
     height: 0.3vw;
-    background: repeating-linear-gradient(90deg,var(--darkGray) 0 0.7vw ,transparent 0 1vw) center;
+    background: repeating-linear-gradient(90deg,var(--darkGray) 0 0.7vw, var(--white) 0 1vw) center;
     background-size:100% 0.3vw;
     background-repeat:no-repeat;
     z-index: -20;
@@ -522,7 +513,7 @@ picture img {
 }
 .lineV, .lineVtop, .lineL, .lineR, .lineShort {
     width: 0.3vw;
-    background: repeating-linear-gradient(to bottom,var(--darkGray) 0 0.7vw,transparent 0 1vw) 100% 0.3vw no-repeat;
+    background: repeating-linear-gradient(to bottom,var(--darkGray) 0 0.7vw, var(--white) 0 1vw) 100% 0.3vw no-repeat;
     position: absolute;
     z-index: -20;
 }
@@ -627,7 +618,7 @@ picture img {
     }
     .menuBar {
         height: 8vw;
-        grid-template-columns: 10vw 30vw auto 8vw;
+        grid-template-columns: 10vw 30vw 52vw 8vw;
         grid-template-areas:
         "Avatar Name . Popup";
     }
@@ -744,6 +735,9 @@ picture img {
         grid-template-columns: 12vw auto 15vw;
         grid-template-rows: 50vw 28vw 7vw 63vw 7vw;
     }
+    .areaClient {
+        margin-top: 2vw;
+    }
     .reviews {
         height: 62vw;
         grid-template-columns: 1fr 3fr 1fr;
@@ -764,7 +758,7 @@ picture img {
     }
     .contactMe {
         height: 56vw;
-        grid-template-columns: 1fr 80vw 1fr;
+        grid-template-columns: 10vw 80vw 10vw;
         grid-template-rows: 6vw 50vw;
     }
     .contact {
@@ -917,5 +911,237 @@ picture img {
     }
     .prev .purpleText, .next .purpleText {
         font-size: 4vw;
+    }
+}
+@media screen and (orientation:portrait) and (max-width: 500px) {
+    h1 {
+        font-size: 15vw;
+        margin: 0px;
+    }
+    h2 {
+        font-size: 6vw;
+        margin: 0px;
+    }
+    h2.mobile {
+        font-size: 6.5vw;
+        line-height: 7.5vw;
+        margin-top: 5vw;
+    }
+    h3 {
+        font-size: 5.5vw;
+        margin: 0px;
+    }
+    h3.smaller {
+        font-size: 4.5vw;
+    }
+    p {
+        font-size: 4vw;
+        margin: 0px;
+        line-height: 7vw;
+    }
+    p.small {
+        font-size: 3vw;
+        line-height: 4vw;
+        margin-top: 1vw;
+    }
+    p.small.mobile {
+        font-size: 4vw;
+        line-height: 6vw;
+    }
+    p.smaller {
+        font-size: 2.5vw;
+    }
+    p.tiny {
+        font-size: 2.5vw;
+        line-height: 2.9vw;
+    }
+    p.lighter {
+        font-weight: normal;
+    }
+    .areaArrow.whiteText {
+        font-size: 4vw;
+    }
+    .areaArrow.purpleText {
+        font-size: 3.5vw;
+    }
+    .areaTitle .heavier {
+        font-size: 7.5vw;
+        vertical-align: middle;
+        line-height: 25vw;
+    }
+    .subHeader h2 {
+        font-size: 9vw;
+    }
+    header {
+        height: 12vw;
+    }
+    .menuBar {
+    height: 12vw;
+    grid-template-columns: 12vw 35vw 43vw 10vw;
+    grid-template-areas:
+    "Avatar Name . Popup";
+    }
+    .areaName {
+        margin-top: 2vw;
+    }
+    #menuPopup {
+        width: 23vw;
+        height: 30vw;
+        grid-template-rows: 5vw 5vw 5vw 5vw;
+        margin-left: -17vw;
+        margin-top: 11vw;
+    }
+    .burgerBars {
+        font-size: 6vw;
+        margin-top: 3.5vw;
+    }
+    .splashScreen.top {
+        height: 102vw;
+        grid-template-columns: 5vw 90vw 5vw;
+        grid-template-rows: 65vw 17vw 20vw;
+    }
+    .splashScreen.bottom {
+        height: 100vw;
+        grid-template-columns: 25vw 50vw 25vw;
+        grid-template-rows: 2vw 8vw auto;
+    }
+    .checkOut {
+        height: 8vw;
+        grid-template-columns: 2vw auto 2vw 4vw 2vw;
+        grid-template-rows: 8vw;
+    }
+    .aboutMe.blurb {
+        height: 125vw;
+        grid-template-rows: 28vw auto;
+    }
+    .aboutMe.skills {
+        height: 70vw;
+        grid-template-columns: 12vw 1fr 7vw 1fr 12vw;
+        grid-template-rows: 3vw 1fr 3vw 1fr 3vw 1fr;
+        grid-template-areas:
+        ". . . . ."
+        ". Skill1 . Skill2 ."
+        ". . . . ."
+        ". Skill3 . Skill4 ."
+        ". . . . ."
+        ". Skill5 . Skill6 .";
+    }
+    .skillBox {
+        height: 21vw;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1fr 2.5fr;
+    }
+    .sectionR {
+        height: 183vw;
+        grid-template-rows: 58vw 35vw 10vw 73vw 7vw;
+    }
+    .sectionL {
+        height: 183vw;
+        grid-template-rows: 58vw 35vw 10vw 73vw 7vw;
+    }
+    .reviews {
+        height: 72vw;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: 5vw 65vw;
+        grid-template-areas:
+        ". . ."
+        "Prev Reviews Next";
+    }
+    .reviewWrapper {
+        display: grid;
+        height: 65vw;
+        grid-template-columns: 5vw 27vw auto 5vw;
+        grid-template-rows: 3vw 22vw auto;
+        grid-template-areas:
+        ". . . ."
+        ". Avatar Title ."
+        ". TextBox1 TextBox1 .";
+    }
+    .contactMe {
+        height: 56vw;
+        grid-template-columns: 15vw 70vw 15vw;
+        grid-template-rows: 6vw 55vw;
+    }
+    .contact {
+        height: 55vw;
+        grid-template-columns: 8vw 7vw auto 8vw;
+        grid-template-rows: 1.5vw 12vw 12vw 1vw 8vw 8vw 8vw;
+        border-radius: 4vw;
+        width: 70vw;
+    }
+    .horizontalLine {
+        height: 20vw;
+    }
+    .horizontalLineBottom {
+        display: grid;
+        position: relative;
+        height: 12vw;
+        width: 100%;
+        grid-template-columns: 48vw 4vw 48vw;
+        grid-template-areas:
+        ". LineVB LineHB";
+    }
+    .lineHbottom {
+        width: 43vw;
+    }
+    .lineH, .lineHtop {
+        height: 0.5vw;
+        background: repeating-linear-gradient(90deg,var(--darkGray) 0 1vw ,transparent 0 1.3vw) center;
+        background-size:100% 0.5vw;
+        background-repeat:no-repeat;
+        z-index: -20;
+    }
+    .lineV, .lineVtop, .lineL, .lineR, .lineShort {
+        width: 0.5vw;
+        background: repeating-linear-gradient(to bottom,var(--darkGray) 0 1vw,transparent 0 1.3vw) 100% 0.5vw no-repeat;
+        position: absolute;
+        z-index: -20;
+    }
+    .lineH {
+        width: 86vw;
+    }
+    .lineHtop {
+        width: 15.2vw;
+        margin-left: 3vw;
+        margin-top: 3.7vw;
+    }
+    .lineVtop {
+        height: 300vw;
+        margin-left: 18vw;
+        margin-top: -4.8vw;
+    }
+    .lineR {
+        height: 204.7vw;
+    }
+    .lineL {
+        height: 204.7vw;
+    }
+    .lineShort {
+        margin-left: 35vw;
+    }
+    .pictureR, .pictureL {
+        height: 50vw;
+    }
+    .pictureR {
+        filter: drop-shadow(-2.8vw 5vw var(--purple));
+    }
+    .pictureL {
+        filter: drop-shadow(2.8vw 5vw var(--purple));
+    }
+    picture img {
+        height: 50vw;
+    }
+    .reviewBox {
+        border: 0.3vw solid var(--purple);
+        height: 65vw;
+    }
+    .circleMenu {
+        margin-left: 3.3vw;
+        margin-top: 2.8vw;
+        width: 6vw;
+        height: 6vw;
+    }
+    .circleMenu img {
+        width: 6vw;
     }
 }
