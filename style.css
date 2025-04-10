@@ -77,9 +77,13 @@ header {
     z-index: 50;
 }
 body {
+    background-color: var(--white);
     margin: 0px;
     display: grid;
     row-gap: 0px;
+}
+.contentWrapper {
+    display: grid;
 }
 main {
     background-color: var(--white);
@@ -89,7 +93,6 @@ main {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    z-index: -50;
 }
 ::-webkit-scrollbar {
     width: 0px;
@@ -124,16 +127,16 @@ main {
     "Avatar Name . AboutMe Projects Reviews ContactMenu";
 }
 .splashScreen.top {
-    height: 35vw;
+    height: 50vh;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 14vw 8vw 13vw;
+    grid-template-rows: auto 8vw 13vw;
     grid-template-areas:
     ". . ."
     ". Ani ."
     ". Tag .";
 }
 .splashScreen.bottom {
-    height: 25vw;
+    height: 45vh;
     grid-template-columns: 35vw 30vw 35vw;
     grid-template-rows: 4.5vw auto;
     grid-template-areas:
@@ -172,6 +175,7 @@ main {
     grid-template-areas:
     "Icon SkillTitle"
     ". Info";
+    z-index: 5;
 }
 .sectionR {
     height: 70vw;
@@ -196,9 +200,9 @@ main {
     ". ReadMore Line";
 }
 .reviews {
-    height: 33vw;
+    height: 34vw;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 5vw 25vw;
+    grid-template-rows: 6vw 25vw;
     grid-template-areas:
     ". . ."
     "Prev Reviews Next";
@@ -462,7 +466,6 @@ picture img {
     background-color: var(--purple);
     width: 65vw;
     height: 30vw;
-    z-index: -20;
 }
 .reviewBox {
     border-radius: 3vw;
@@ -470,7 +473,6 @@ picture img {
     background-color: var(--white);
     width: 70vw;
     height: 25vw;
-    z-index: -20;
 }
 .prev, .next {
     border-radius: 50%;
@@ -501,7 +503,6 @@ picture img {
     background: repeating-linear-gradient(90deg,var(--darkGray) 0 0.7vw, var(--white) 0 1vw) center;
     background-size:100% 0.3vw;
     background-repeat:no-repeat;
-    z-index: -20;
 }
 .lineH {
     width: 60.7vw;
@@ -515,7 +516,6 @@ picture img {
     width: 0.3vw;
     background: repeating-linear-gradient(to bottom,var(--darkGray) 0 0.7vw, var(--white) 0 1vw) 100% 0.3vw no-repeat;
     position: absolute;
-    z-index: -20;
 }
 .lineV {
     height: 58.6vw;
@@ -523,7 +523,7 @@ picture img {
     margin-top: 10vw;
 }
 .lineVtop {
-    height: 30vw;
+    height: 50vh;
     margin-left: 15vw;
     margin-top: -2.7vw;
 }
@@ -545,7 +545,7 @@ picture img {
 .blankFooter {
     height: 5vw
 }
-@media all and (orientation:portrait) {
+@media screen and (orientation:portrait) {
     h1 {
         font-size: 13vw;
         margin: 0px;
@@ -682,12 +682,10 @@ picture img {
         margin-top: 2vw;
     }
     .splashScreen.top {
-        height: 73vw;
         grid-template-columns: 0.5fr 4fr 0.5fr;
-        grid-template-rows: 40vw 15vw 18vw;
+        grid-template-rows: auto 14vw 16vw;
     }
     .splashScreen.bottom {
-        height: 60vw;
         grid-template-columns: 27.5vw 45vw 27.5vw;
         grid-template-rows: 2vw 6vw auto;
         grid-template-areas:
@@ -793,17 +791,15 @@ picture img {
         width: 43vw;
         margin-left: -2vw;
         margin-top: 10.5vw;
-        z-index: -20;
     }
     .lineVbottom {
         grid-area: LineVB;
         width: 0.5vw;
         background: repeating-linear-gradient(to bottom,var(--darkGray) 0 1vw,transparent 0 1.3vw) 100% 0.5vw no-repeat;
         position: absolute;
-        height: 8vw;
+        height: 7.5vw;
         margin-left: 2vw;
         margin-top: 10vw;
-        z-index: -20;
     }
     .icon img {
         width: 6vw;
@@ -841,13 +837,11 @@ picture img {
         background: repeating-linear-gradient(90deg,var(--darkGray) 0 1vw ,transparent 0 1.3vw) center;
         background-size:100% 0.5vw;
         background-repeat:no-repeat;
-        z-index: -20;
     }
     .lineV, .lineVtop, .lineL, .lineR, .lineShort {
         width: 0.5vw;
         background: repeating-linear-gradient(to bottom,var(--darkGray) 0 1vw,transparent 0 1.3vw) 100% 0.5vw no-repeat;
         position: absolute;
-        z-index: -20;
     }
     .lineH {
         width: 86vw;
@@ -923,16 +917,23 @@ picture img {
         margin: 0px;
     }
     h2.mobile {
-        font-size: 6.5vw;
-        line-height: 7.5vw;
-        margin-top: 5vw;
+        font-size: 8vw;
+        line-height: 8.5vw;
+        margin-top: 3vw;
+    }
+    .tagline h2 {
+        line-height: 8vw;
     }
     h3 {
         font-size: 5.5vw;
         margin: 0px;
     }
     h3.smaller {
-        font-size: 4.5vw;
+        font-size: 5vw;
+    }
+    h3.mobile {
+        font-size: 9vw;
+        margin-top: 4vw;
     }
     p {
         font-size: 4vw;
@@ -952,8 +953,10 @@ picture img {
         font-size: 2.5vw;
     }
     p.tiny {
-        font-size: 2.5vw;
-        line-height: 2.9vw;
+        font-size: 4vw;
+        line-height: 8vw;
+        margin-top: 3vw;
+        margin-right: 5vw;
     }
     p.lighter {
         font-weight: normal;
@@ -965,7 +968,7 @@ picture img {
         font-size: 3.5vw;
     }
     .areaTitle .heavier {
-        font-size: 7.5vw;
+        font-size: 8vw;
         vertical-align: middle;
         line-height: 25vw;
     }
@@ -982,7 +985,7 @@ picture img {
     "Avatar Name . Popup";
     }
     .areaName {
-        margin-top: 2vw;
+        margin-top: 3vw;
     }
     #menuPopup {
         width: 23vw;
@@ -996,12 +999,10 @@ picture img {
         margin-top: 3.5vw;
     }
     .splashScreen.top {
-        height: 102vw;
         grid-template-columns: 5vw 90vw 5vw;
-        grid-template-rows: 65vw 17vw 20vw;
+        grid-template-rows: auto 17vw 20vw;
     }
     .splashScreen.bottom {
-        height: 100vw;
         grid-template-columns: 25vw 50vw 25vw;
         grid-template-rows: 2vw 8vw auto;
     }
@@ -1015,21 +1016,23 @@ picture img {
         grid-template-rows: 28vw auto;
     }
     .aboutMe.skills {
-        height: 70vw;
-        grid-template-columns: 12vw 1fr 7vw 1fr 12vw;
-        grid-template-rows: 3vw 1fr 3vw 1fr 3vw 1fr;
-        grid-template-areas:
-        ". . . . ."
-        ". Skill1 . Skill2 ."
-        ". . . . ."
-        ". Skill3 . Skill4 ."
-        ". . . . ."
-        ". Skill5 . Skill6 .";
+        height: 50vw;
+        display: flex;
+        overflow: scroll;
+        padding-left: 6.5vw;
+        padding-right: 13vw;
+        grid-template-columns: 100vw;
+        grid-template-rows: 50vw;
+        grid-template-areas: 
+        "Skill1 Skill2 Skill3 Skill4 Skill5 Skill6";
     }
     .skillBox {
-        height: 21vw;
-        grid-template-columns: 1fr 3fr;
-        grid-template-rows: 1fr 2.5fr;
+        display: inline-grid;
+        height: 50vw;
+        width: 70vw;
+        margin-left: 5vw;
+        grid-template-columns: 20vw 50vw;
+        grid-template-rows: 15vw auto;
     }
     .sectionR {
         height: 183vw;
@@ -1050,8 +1053,8 @@ picture img {
     .reviewWrapper {
         display: grid;
         height: 65vw;
-        grid-template-columns: 5vw 27vw auto 5vw;
-        grid-template-rows: 3vw 22vw auto;
+        grid-template-columns: 7vw 27vw auto 7vw;
+        grid-template-rows: 5vw 22vw auto;
         grid-template-areas:
         ". . . ."
         ". Avatar Title ."
@@ -1065,7 +1068,7 @@ picture img {
     .contact {
         height: 55vw;
         grid-template-columns: 8vw 7vw auto 8vw;
-        grid-template-rows: 1.5vw 12vw 12vw 1vw 8vw 8vw 8vw;
+        grid-template-rows: 3vw 12vw 12vw 1vw 8vw 8vw 8vw;
         border-radius: 4vw;
         width: 70vw;
     }
@@ -1089,13 +1092,14 @@ picture img {
         background: repeating-linear-gradient(90deg,var(--darkGray) 0 1vw ,transparent 0 1.3vw) center;
         background-size:100% 0.5vw;
         background-repeat:no-repeat;
-        z-index: -20;
     }
     .lineV, .lineVtop, .lineL, .lineR, .lineShort {
         width: 0.5vw;
         background: repeating-linear-gradient(to bottom,var(--darkGray) 0 1vw,transparent 0 1.3vw) 100% 0.5vw no-repeat;
         position: absolute;
-        z-index: -20;
+    }
+    .lineVbottom {
+        height: 7vw;
     }
     .lineH {
         width: 86vw;
@@ -1106,7 +1110,7 @@ picture img {
         margin-top: 3.7vw;
     }
     .lineVtop {
-        height: 300vw;
+        height: calc(45vh + 180vw);
         margin-left: 18vw;
         margin-top: -4.8vw;
     }
@@ -1143,5 +1147,392 @@ picture img {
     }
     .circleMenu img {
         width: 6vw;
+    }
+    .icon img {
+        width: 12vw;
+        height: 12vw;
+        margin-left: 2.5vw;
+        margin-top: 2.5vw;
+    }
+    .rounded.skillBox {
+        border-radius: 5vw;
+    }
+    .purpleBox {
+        width: 34vw;
+    }
+}
+@media screen and (orientation: landscape) and (min-width: 1400px) {
+    body {
+        background-color: var(--darkGray);
+    }
+    .contentWrapper {
+        display: grid;
+        background-color: var(--white);
+        width: 1200px;
+        height: 750px;
+        margin-top: calc((100vh - 750px)/2);
+        margin-left: calc((100vw - 1200px)/2);
+        overflow: scroll;
+    }
+    h1, h2, h3 {
+        font-family: "Playfair Display", serif;
+        font-weight: 600;
+        font-style: normal;
+    }
+    h1 {
+        font-size: 90px;
+        margin: 0px;
+    }
+    h2 {
+        font-size: 50px;
+        margin: 0px;
+    }
+    h3 {
+        font-size: 30px;
+        margin: 0px;
+    }
+    h3.smaller {
+        font-size: 36px;
+    }
+    p {
+        font-size: 20px;
+        line-height: 40px;
+    }
+    p.small {
+        font-size: 22px;
+    }
+    p.smaller {
+        font-size: 16px;
+    }
+    p.tiny {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .heavier {
+        font-weight: 700;
+    }
+    .nudgeUp {
+        margin-bottom: 3.5px;
+    }
+    .nudgeLeft {
+        margin-left: 3.5px;
+    }
+    header {
+        height: 40px;
+    }
+    .scrollButton {
+        display: none;
+        position: fixed;
+        bottom: calc(100vh - 700px - (((100vh - 750px)/2)));
+        right: calc(100vw - 1150px - (((100vw - 1200px)/2)));;
+        font-size: 40px;
+        line-height: 45px;
+        height: 40px;
+        width: 40px;
+        border: 3px dashed var(--purple);
+    }
+    .menuBar {
+        height: 45px;
+        grid-template-columns: 60px 200px 520px 120px 100px 100px 100px;
+        grid-template-areas:
+        "Avatar Name . AboutMe Projects Reviews ContactMenu";
+    }
+    .splashScreen.top {
+        height: 405px;
+        width: 1200px;
+        grid-template-columns: 240px 720px 240px;
+        grid-template-rows: auto 90px 130px;
+        grid-template-areas:
+        ". . ."
+        ". Ani ."
+        ". Tag .";
+    }
+    .splashScreen.bottom {
+        height: 300px;
+        width: 1200px;
+        grid-template-columns: 400px 400px 400px;
+        grid-template-rows: 5px 40px auto;
+        grid-template-areas:
+        ". . ."
+        ". Work Line1"
+        ". . Line2";
+    }
+    .checkOut {
+        height: 60px;
+        grid-template-columns: auto 40px 10px;
+        grid-template-rows: 60px;
+        grid-template-areas:
+        "Check Arrow .";
+    }
+    .aboutMe.blurb {
+        height: 420px;
+        width: 1200px;
+        grid-template-columns: 60px auto 420px 60px;
+        grid-template-rows: 54px auto;
+        grid-template-areas:
+        ". Title Avatar ."
+        ". TextBox1 Avatar .";
+    }
+    .aboutMe.skills {
+        height: 330px;
+        width: 1200px;
+        grid-template-columns: 60px 1fr 84px 1fr 84px 1fr 60px;
+        grid-template-rows: 30px 1fr 30px 1fr;
+        grid-template-areas:
+        ". . . . . . ."
+        ". Skill1 . Skill2 . Skill3 ."
+        ". . . . . . ."
+        ". Skill4 . Skill5 . Skill6 .";
+    }
+    .skillBox {
+        height: 138px;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1fr 2.5fr;
+        grid-template-areas:
+        "Icon SkillTitle"
+        ". Info";
+        z-index: 5;
+    }
+    .sectionR {
+        height: 840px;
+        width: 1200px;
+        grid-template-columns: 1fr 2fr 100px;
+        grid-template-rows: 360px 138px 42px 264px 36px;
+        grid-template-areas:
+        "Line Picture ."
+        "Line SubHeader ."
+        "Line Client ."
+        "Line TextBox ."
+        "Line ReadMore .";
+    }
+    .sectionL {
+        height: 840px;
+        width: 1200px;
+        grid-template-columns: 100px 2fr 1fr;
+        grid-template-rows: 360px 138px 42px 264px 36px;
+        grid-template-areas:
+        ". Picture Line"
+        ". SubHeader Line"
+        ". Client Line"
+        ". TextBox Line"
+        ". ReadMore Line";
+    }
+    .reviews {
+        height: 420px;
+        width: 1200px;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: 72px 300px;
+        grid-template-areas:
+        ". . ."
+        "Prev Reviews Next";
+    }
+    .reviewWrapper {
+        display: grid;
+        height: 300px;
+        grid-template-columns: 60px 265px auto 60px;
+        grid-template-rows: 36px 36px auto;
+        grid-template-areas:
+        ". . . ."
+        ". Avatar Title ."
+        ". Avatar TextBox1 .";
+    }
+    .contactMe {
+        height: 432px;
+        width: 1200px;
+        grid-template-columns: 210px 780px 210px;
+        grid-template-rows: 72px 300px;
+        grid-template-areas:
+        ". LineS ."
+        ". Contact .";
+        margin-bottom: 36px;
+        position: relative;
+    }
+    .contact {
+        height: 300px;
+        grid-template-columns: 60px 85px auto 60px;
+        grid-template-rows: 18px 72px 42px 12px 72px 72px 72px;
+        grid-template-areas:
+        ". . . ."
+        ". SubHeader SubHeader ."
+        ". TextBox TextBox ."
+        ". . . ."
+        ". Icon1 Link1 ."
+        ". Icon2 Link2 ."
+        ". Icon3 Link3 .";
+    }
+    .areaName {
+        margin-top: 6px;
+    }
+    .areaAboutMe {
+        margin-top: 0;
+    }
+    .areaProjects {
+        margin-top: 0;
+    }
+    .areaReviews {
+        margin-top: 0;
+    }
+    .areaContactMenu {
+        margin-top: 0;
+    }
+    .areaArrow {
+        font-size: 30px;
+    }
+    .areaSkillTitle {
+        margin-top: 18px;
+    }
+    .horizontalLine {
+        height: 144px;
+        width: 100%;
+    }
+    .rounded {
+        border-radius: 25px;
+    }
+    .roundedWork {
+        border-radius: 15px;
+    }
+    .purpleBox {
+        border-radius: 7px;
+        width: 210px;
+        height: 30px;
+        margin-left: -6px;
+        margin-top: -24px;
+    }
+    .circle, .circleReview, .circleMenu {
+        border: 2px solid var(--darkGray);
+        filter: drop-shadow(-20px 10px var(--purple));
+    }
+    .circle {
+        width: 300px;
+        height: 300px;
+        margin-left: 120px;
+        margin-top: 36px;
+    }
+    .circleReview {
+        filter: drop-shadow(-20px 8.5px var(--purple));
+        width: 215px;
+        height: 215px;
+    }
+    .circleMenu {
+        filter: drop-shadow(-4px 2px var(--purple));
+        border: 1px solid var(--darkGray);
+        margin-left: 15px;
+        margin-top: 5px;
+        width: 30px;
+        height: 30px;
+    }
+    .circle img {
+        width: 300px;
+        margin-top: 6px;
+    }
+    .circleReview img {
+        width: 215px;
+        filter: none;
+    }
+    .circleMenu img {
+        width: 30px;
+    }
+    .pictureR, .pictureL {
+        width: 720px;
+        height: 300px;
+        margin-bottom: 48px;
+    }
+    .pictureR {
+        filter: drop-shadow(-18px 30px var(--purple));
+    }
+    .pictureL {
+        filter: drop-shadow(18px 30px var(--purple));
+    }
+    picture img {
+        border-radius: 40px;
+        outline: 2px solid var(--darkGray);
+        outline-offset: -2px;
+        width: 720px;
+        height: 300px;
+        filter: none;
+    }
+    .contact {
+        border-radius: 40px;
+        background-color: var(--purple);
+        width: 780px;
+        height: 360px;
+    }
+    .reviewBox {
+        border-radius: 40px;
+        border: 3px solid var(--purple);
+        background-color: var(--white);
+        width: 840px;
+        height: 300px;
+    }
+    .prev, .next {
+        border-radius: 50%;
+        border: 3px solid var(--purple);
+        width: 48px;
+        height: 48px;
+    }
+    .prev .purpleText, .next .purpleText {
+        font-size: 48px;
+    }
+    .skillBox .icon {
+        margin-left: 15px;
+        margin-top: 15px;
+    }
+    .icon img {
+        width: 48px;
+        height: 48px;
+    }
+    .icon .whiteText {
+        font-size: 54px;
+    }
+    .squish {
+        -webkit-transform: scaleX(0.9);
+        transform: scaleX(0.9);
+    }
+    .lineH, .lineHtop {
+        height: 3px;
+        background: repeating-linear-gradient(90deg,var(--darkGray) 0 8.5px, var(--white) 0 12px) center;
+        background-size:100% 3px;
+        background-repeat:no-repeat;
+    }
+    .lineH {
+        width: 756px;
+    }
+    .lineHtop {
+        width: 144px;
+        margin-left: 36px;
+        margin-top: 24px;
+    }
+    .lineV, .lineVtop, .lineL, .lineR, .lineShort {
+        width: 3px;
+        background: repeating-linear-gradient(to bottom,var(--darkGray) 0 8.5px, var(--white) 0 12px) 100% 3px no-repeat;
+        position: absolute;
+    }
+    .lineV {
+        height: 703px;
+        margin-left: 255px;
+        margin-top: 120px;
+    }
+    .lineVtop {
+        height: 375px;
+        margin-left: 180px;
+        margin-top: -20px;
+    }
+    .lineR {
+        height: 990px;
+        margin-left: 140px;
+        margin-top: -75.5px;
+    }
+    .lineL {
+        height: 990px;
+        margin-left: 222px;
+        margin-top: -75.5px;
+    }
+    .lineShort {
+        height: 120px;
+        margin-left: 390px;
+        margin-top: -120px;
+    }
+    .blankFooter {
+        height: 20px
     }
 }
