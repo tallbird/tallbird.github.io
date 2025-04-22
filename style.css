@@ -1164,14 +1164,25 @@ picture img {
 @media screen and (orientation: landscape) and (min-width: 1400px) {
     body {
         background-color: var(--darkGray);
+        display: grid;
+        grid-template-columns: 1fr 1200px 1fr;
+        grid-template-rows: 1fr 750px 1fr;
+        grid-template-areas:
+        ". Empty ."
+        ". Content ."
+        ". . .";
+    }
+    .empty {
+        display: grid;
+        grid-area: Empty;
+        height: calc((100vh - 750px)/2);
     }
     .contentWrapper {
+        grid-area: Content;
         display: grid;
         background-color: var(--white);
         width: 1200px;
         height: 750px;
-        margin-top: calc((100vh - 750px)/2);
-        margin-left: calc((100vw - 1200px)/2);
         overflow: scroll;
     }
     h1, h2, h3 {
@@ -1184,15 +1195,21 @@ picture img {
         margin: 0px;
     }
     h2 {
-        font-size: 50px;
+        font-size: 45px;
         margin: 0px;
+    }
+    h2.heavier {
+        font-size: 50px;
     }
     h3 {
-        font-size: 30px;
-        margin: 0px;
+        font-size: 26px;
+        margin-top: -5px;
+    }
+    h3.lighter {
+        font-size: 32px;
     }
     h3.smaller {
-        font-size: 36px;
+        font-size: 32px;
     }
     p {
         font-size: 20px;
@@ -1218,7 +1235,7 @@ picture img {
         margin-left: 3.5px;
     }
     header {
-        height: 40px;
+        height: 50px;
     }
     .scrollButton {
         display: none;
@@ -1232,35 +1249,36 @@ picture img {
         border: 3px dashed var(--purple);
     }
     .menuBar {
-        height: 45px;
+        height: 50px;
+        margin-top: 5px;
         grid-template-columns: 60px 200px 520px 120px 100px 100px 100px;
         grid-template-areas:
         "Avatar Name . AboutMe Projects Reviews ContactMenu";
     }
     .splashScreen.top {
-        height: 405px;
+        height: 445px;
         width: 1200px;
         grid-template-columns: 240px 720px 240px;
-        grid-template-rows: auto 90px 130px;
+        grid-template-rows: auto 100px 150px;
         grid-template-areas:
         ". . ."
         ". Ani ."
         ". Tag .";
     }
     .splashScreen.bottom {
-        height: 300px;
+        height: 250px;
         width: 1200px;
-        grid-template-columns: 400px 400px 400px;
-        grid-template-rows: 5px 40px auto;
+        grid-template-columns: 425px 350px 425px;
+        grid-template-rows: 5px 50px auto;
         grid-template-areas:
         ". . ."
         ". Work Line1"
         ". . Line2";
     }
     .checkOut {
-        height: 60px;
-        grid-template-columns: auto 40px 10px;
-        grid-template-rows: 60px;
+        height: 50px;
+        grid-template-columns: auto 35px 10px;
+        grid-template-rows: 50px;
         grid-template-areas:
         "Check Arrow .";
     }
@@ -1416,10 +1434,10 @@ picture img {
     .circleMenu {
         filter: drop-shadow(-4px 2px var(--purple));
         border: 1px solid var(--darkGray);
-        margin-left: 15px;
+        margin-left: 20px;
         margin-top: 5px;
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
     }
     .circle img {
         width: 300px;
@@ -1430,7 +1448,7 @@ picture img {
         filter: none;
     }
     .circleMenu img {
-        width: 30px;
+        width: 25px;
     }
     .pictureR, .pictureL {
         width: 720px;
@@ -1471,7 +1489,7 @@ picture img {
         height: 48px;
     }
     .prev .purpleText, .next .purpleText {
-        font-size: 48px;
+        font-size: 36px;
     }
     .skillBox .icon {
         margin-left: 15px;
@@ -1515,7 +1533,7 @@ picture img {
     .lineVtop {
         height: 375px;
         margin-left: 180px;
-        margin-top: -20px;
+        margin-top: -29px;
     }
     .lineR {
         height: 990px;
