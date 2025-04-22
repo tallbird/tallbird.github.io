@@ -1166,7 +1166,6 @@ picture img {
         background-color: var(--darkGray);
     }
     .contentWrapper {
-        grid-area: Content;
         display: grid;
         background-color: var(--white);
         width: 1200px;
