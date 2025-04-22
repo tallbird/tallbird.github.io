@@ -930,7 +930,7 @@ picture img {
     }
     h3 {
         font-size: 5.5vw;
-        margin: 0px;
+        margin-top: -1vw;
     }
     h3.smaller {
         font-size: 4.5vw;
@@ -994,7 +994,7 @@ picture img {
     }
     .menuBar {
     height: 12vw;
-    grid-template-columns: 12vw 35vw 43vw 10vw;
+    grid-template-columns: 13vw 36vw 41vw 10vw;
     grid-template-areas:
     "Avatar Name . Popup";
     }
