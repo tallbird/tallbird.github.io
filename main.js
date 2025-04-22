@@ -1,10 +1,11 @@
 let buttonTop = document.getElementById("scrollTop");
 
-// When the user scrolls down 20px from the top of the document, show the button
+// scroll event listener for mobile & tablets
 window.onscroll = function() {scrollFunction()};
 
+// When the user scrolls down 20px from the top of the document, show the button
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  if (document.getElementById('main').scrollTop > 20 || document.documentElement.scrollTop > 20) {
     buttonTop.style.display = "inline-block";
   } else {
     buttonTop.style.display = "none";
@@ -13,7 +14,7 @@ function scrollFunction() {
 
 // on click scroll to the top of the document
 function scrollButton() {
-  document.body.scrollTop = 0;
+  document.getElementById('main').scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
 
