@@ -935,6 +935,7 @@ picture img {
     h3.smaller {
         font-size: 4.5vw;
         line-height: 7vw;
+        margin-top: 0;
     }
     h3.mobile {
         font-size: 9vw;
