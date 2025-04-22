@@ -590,6 +590,9 @@ picture img {
     p.lighter {
         font-weight: normal;
     }
+    .pop {
+        line-height: 6.5vw;
+    }
     .areaArrow.whiteText {
         font-size: 4vw;
     }
@@ -657,13 +660,13 @@ picture img {
     #menuPopup {
         visibility: hidden;
         width: 20vw;
-        height: 25vw;
+        height: 27vw;
         background-color: var(--white);
         color: var(--darkGray);
         text-align: right;
         position: absolute;
         grid-template-columns: auto;
-        grid-template-rows: 4vw 4vw 4vw 4vw;
+        grid-template-rows: 5vw 5vw 5vw 5vw;
         grid-template-areas:
         "AboutMePop"
         "ProjectsPop"
@@ -672,6 +675,7 @@ picture img {
         z-index: 10;
         margin-left: -16.5vw;
         margin-top: 8vw;
+        padding-top: 0.5vw;
         border-bottom-left-radius: 4vw;
     }
     #menuPopup.show {
@@ -929,7 +933,8 @@ picture img {
         margin: 0px;
     }
     h3.smaller {
-        font-size: 5vw;
+        font-size: 4.5vw;
+        line-height: 7vw;
     }
     h3.mobile {
         font-size: 9vw;
@@ -946,7 +951,7 @@ picture img {
         margin-top: 1vw;
     }
     p.small.mobile {
-        font-size: 4vw;
+        font-size: 3.5vw;
         line-height: 6vw;
     }
     p.smaller {
@@ -954,18 +959,24 @@ picture img {
     }
     p.tiny {
         font-size: 4vw;
-        line-height: 8vw;
+        line-height: 7vw;
         margin-top: 3vw;
         margin-right: 5vw;
     }
     p.lighter {
         font-weight: normal;
     }
+    .pop {
+        font-size: 5.5vw;
+        line-height: 9vw;
+        margin-right: 4.5vw;
+    }
     .areaArrow.whiteText {
         font-size: 4vw;
+        margin-top: 0.5vw;
     }
     .areaArrow.purpleText {
-        font-size: 3.5vw;
+        font-size: 4.5vw;
     }
     .areaTitle .heavier {
         font-size: 8vw;
@@ -974,6 +985,9 @@ picture img {
     }
     .subHeader h2 {
         font-size: 9vw;
+    }
+    .scrollButton {
+        line-height: 6.5vw;
     }
     header {
         height: 12vw;
@@ -988,11 +1002,12 @@ picture img {
         margin-top: 3vw;
     }
     #menuPopup {
-        width: 23vw;
-        height: 30vw;
-        grid-template-rows: 5vw 5vw 5vw 5vw;
-        margin-left: -17vw;
+        width: 35vw;
+        height: 38vw;
+        grid-template-rows: 8vw 8vw 8vw 8vw;
+        margin-left: -25vw;
         margin-top: 11vw;
+        padding-top: 2vw;
     }
     .burgerBars {
         font-size: 6vw;
@@ -1021,6 +1036,7 @@ picture img {
         overflow: scroll;
         padding-left: 6.5vw;
         padding-right: 13vw;
+        padding-top: 5vw;
         grid-template-columns: 100vw;
         grid-template-rows: 50vw;
         grid-template-areas: 
@@ -1110,7 +1126,7 @@ picture img {
         margin-top: 3.7vw;
     }
     .lineVtop {
-        height: calc(45vh + 180vw);
+        height: calc(45vh + 185vw);
         margin-left: 18vw;
         margin-top: -4.8vw;
     }
