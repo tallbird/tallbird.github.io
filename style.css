@@ -1164,18 +1164,6 @@ picture img {
 @media screen and (orientation: landscape) and (min-width: 1400px) {
     body {
         background-color: var(--darkGray);
-        display: grid;
-        grid-template-columns: 1fr 1200px 1fr;
-        grid-template-rows: 1fr 750px 1fr;
-        grid-template-areas:
-        ". Empty ."
-        ". Content ."
-        ". . .";
-    }
-    .empty {
-        display: grid;
-        grid-area: Empty;
-        height: calc((100vh - 750px)/2);
     }
     .contentWrapper {
         grid-area: Content;
@@ -1183,6 +1171,8 @@ picture img {
         background-color: var(--white);
         width: 1200px;
         height: 750px;
+        margin-top: calc((100vh - 750px)/2);
+        margin-left: calc((100vw - 1200px)/2);
         overflow: scroll;
     }
     h1, h2, h3 {
